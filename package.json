@@ -1,15 +1,22 @@
 {
-	"devDependencies": {
-		"esbuild": "^0.21.5",
-		"glob": "^10.4.2",
-		"parcel": "^2.12.0",
-		"rolldown": "0.10.4-snapshot-0d15f0e-20240620002606",
-		"vite": "^5.3.1",
-		"webpack": "^5.92.1",
-		"webpack-cli": "^5.1.4"
-	},
-  "scripts": {
-    "build": "pnpm run -r build"
+  "name": "metrics",
+  "description": "Stores performance metrics for rolldown.",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "plotly.js": "^2.33.0"
   },
-	"packageManager": "pnpm@8.10.5+sha1.4370a069f21873a0ad83c785b8048ed8caf6e6e9"
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^20.14.8",
+    "@types/plotly.js": "^1.54.22",
+    "typescript": "^4.5.2",
+    "vite": "^5.3.1"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "packageManager": "pnpm@8.10.5+sha1.4370a069f21873a0ad83c785b8048ed8caf6e6e9"
 }
