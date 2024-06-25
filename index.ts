@@ -40,7 +40,7 @@ async function main() {
 
 	for (let [
 		series,
-		{ unit, data, commit, timestamp, metric },
+		{ unit, data, commit, timestamp, metric, repoUrl },
 	] of Object.entries(normalizedEntryDict)) {
 		let plotName = series;
 		let seriesName: string;
@@ -80,13 +80,14 @@ async function main() {
 			plot?.data.push({
 				name: key,
 				line: {
-					// width:1.5,
+          // @ts-ignore
           shape: 'hv'
 				},
 				x: timestamp.map((n) => new Date(n)),
 				y: value,
 				hovertext: commit,
 				hovertemplate: `%{y} ${unit}<br>(%{hovertext})`,
+        repoUrl: commit,
 			});
 		});
 	}
@@ -110,15 +111,19 @@ async function main() {
 
 		// @ts-ignore
 		Plotly.newPlot(plotDiv, definition.data, definition.layout);
-		// plotDiv.on("plotly_click", (data) => {
-		// 	const commit_hash: string = (data.points[0] as any).hovertext;
-		// 	const url = `https://github.com/rolldown-rs/rolldown/commit/${commit_hash}`;
-		// 	const notification_text = `Commit <b>${commit_hash}</b> URL copied to clipboard`;
-		// 	navigator.clipboard.writeText(url);
-		// 	show_notification(notification_text);
-		// });
+		plotDiv.on("plotly_click", (data) => {
+			const commit_hash: string = (data.points[0] as any).hovertext;
+      if (!commit_hash) {
+        return;
+      }
+      let repoUrl = (data.points[0] as any).repoUrl ?? "https://github.com/rolldown/rolldown";
+			const url = `${repoUrl.trimEnd("/")}/commit/${commit_hash}`;
+      console.log(`url: `, url)
+			const notification_text = `Commit <b>${commit_hash}</b> URL copied to clipboard`;
+			navigator.clipboard.writeText(url);
+			show_notification(notification_text);
+		});
 		metricContainerMap.get(metric)?.appendChild(plotDiv);
-		// bodyElement.appendChild(plotDiv);
 	}
 }
 
@@ -174,6 +179,7 @@ function normalizeEntryDict(
 			timestamp,
 			unit: value[0].unit,
 			metric: value[0].metric,
+      repoUrl: value[0].repoUrl,
 		};
 	});
 	return [map, metricSet];
