@@ -1,8 +1,8 @@
-# metric for rolldown
+# Metric for Rolldown
 
 
 ## Data Source format
-We use this generic data struct for metric aggregation
+We use this generic data structure for metric aggregation
 ```ts
 export interface Entry {
 	case: string; // case name
@@ -15,7 +15,7 @@ export interface Entry {
 }
 ```
 
-## data source storage
+## Data source storage
 Storing entries line by line, each line is a entry with a json format(Recommend).  
 
 1. Comparing with store the whole data in a json file, this method could reduce parsing, stringify overhead, especially the metric data source become bigger. 
