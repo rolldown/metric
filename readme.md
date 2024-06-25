@@ -1,4 +1,4 @@
-# Metric for rolldown
+# metric for rolldown
 
 
 ## Data Source format
@@ -16,8 +16,13 @@ export interface Entry {
 ```
 
 ## data source storage
-Storing entries line by line, each line is a entry with a json format(Recommend).
+Storing entries line by line, each line is a entry with a json format(Recommend).  
+
 1. Comparing with store the whole data in a json file, this method could reduce parsing, stringify overhead, especially the metric data source become bigger. 
 2. Make streaming transform available, which may reduce white screen time.
 
 This is not required, any format that could convert to `Entry[]` is acceptable.
+
+
+## Credits
+- [rust-analyzer/metric](https://github.com/rust-analyzer/metrics/tree/master)
