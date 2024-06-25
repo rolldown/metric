@@ -10,8 +10,10 @@ function parseQueryString(): [Date?, Date?] {
 	let query = new URLSearchParams(location.search);
 	let startQuery = query.get("start");
 	let endQuery = query.get("end");
-	if (startQuery && endQuery) {
+	if (startQuery) {
 		start = new Date(startQuery);
+	}
+	if (endQuery) {
 		end = new Date(endQuery);
 	}
 	return [start, end];
@@ -29,10 +31,18 @@ function show_notification(html_text: string) {
 async function main() {
 	let entries = await initDataSource();
 	const [start, end] = parseQueryString();
+	console.log(`start: `, start);
 	setTimeFrameInputs(start, end);
-	const metrics = groupBy(entries, (item: Entry) => {
-		return `${item.case}/${item.metric}`;
-	});
+	const metrics = groupBy(
+		entries.filter((entry) => {
+			const lessThanEnd = end ? entry.timestamp <= +end : true;
+			const biggerThanStart = start ? entry.timestamp >= +start : true;
+			return lessThanEnd && biggerThanStart;
+		}),
+		(item: Entry) => {
+			return `${item.case}/${item.metric}`;
+		},
+	);
 
 	let [normalizedEntryDict, metricSet] = normalizeEntryDict(metrics);
 	let metricContainerMap = initMetricContainer(metricSet);
@@ -53,7 +63,7 @@ async function main() {
 					title: plotName,
 					xaxis: {
 						type: "date",
-            tickformat: "%Y-%m-%d",
+						tickformat: "%Y-%m-%d",
 					},
 					yaxis: {
 						title: unit,
@@ -80,14 +90,14 @@ async function main() {
 			plot?.data.push({
 				name: key,
 				line: {
-          // @ts-ignore
-          shape: 'hv'
+					// @ts-ignore
+					shape: "hv",
 				},
 				x: timestamp.map((n) => new Date(n)),
 				y: value,
 				hovertext: commit,
 				hovertemplate: `%{y} ${unit}<br>(%{hovertext})`,
-        repoUrl: commit,
+				repoUrl: commit,
 			});
 		});
 	}
@@ -113,12 +123,14 @@ async function main() {
 		Plotly.newPlot(plotDiv, definition.data, definition.layout);
 		plotDiv.on("plotly_click", (data) => {
 			const commit_hash: string = (data.points[0] as any).hovertext;
-      if (!commit_hash) {
-        return;
-      }
-      let repoUrl = (data.points[0] as any).repoUrl ?? "https://github.com/rolldown/rolldown";
+			if (!commit_hash) {
+				return;
+			}
+			let repoUrl =
+				(data.points[0] as any).repoUrl ??
+				"https://github.com/rolldown/rolldown";
 			const url = `${repoUrl.trimEnd("/")}/commit/${commit_hash}`;
-      console.log(`url: `, url)
+			console.log(`url: `, url);
 			const notification_text = `Commit <b>${commit_hash}</b> URL copied to clipboard`;
 			navigator.clipboard.writeText(url);
 			show_notification(notification_text);
@@ -179,7 +191,7 @@ function normalizeEntryDict(
 			timestamp,
 			unit: value[0].unit,
 			metric: value[0].metric,
-      repoUrl: value[0].repoUrl,
+			repoUrl: value[0].repoUrl,
 		};
 	});
 	return [map, metricSet];
@@ -203,4 +215,6 @@ function setTimeFrameInputs(start?: Date, end?: Date) {
 	(endInput as any).value = end ? end.toISOString().split("T")[0] : "";
 }
 
+// @ts-ignore
+window.setDays = setDays;
 main();
