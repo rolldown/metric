@@ -1,14 +1,5 @@
-// export interface Entry {
-// 	case: string;
-// 	metric: string;
-// 	timestamp: number;
-// 	commit: string;
-// 	unit: string;
-// 	records: Record<string, number>;
-// }
-
 // load using import
-import { glob, globSync, globStream, globStreamSync, Glob } from "glob";
+import { glob } from "glob";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -55,6 +46,6 @@ function toEntrys(recordMap, metric) {
 function persistEntries(entries, filename) {
 	for (let entry of entries) {
 		fs.writeFileSync(filename, JSON.stringify(entry), { flag: "a" });
-    fs.writeFileSync(filename, "\n", { flag: "a" });
+		fs.writeFileSync(filename, "\n", { flag: "a" });
 	}
 }
