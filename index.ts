@@ -31,7 +31,6 @@ function show_notification(html_text: string) {
 async function main() {
 	let entries = await initDataSource();
 	const [start, end] = parseQueryString();
-	console.log(`start: `, start);
 	setTimeFrameInputs(start, end);
 	const metrics = groupBy(
 		entries.filter((entry) => {
@@ -146,10 +145,11 @@ function initMetricContainer(metricSet: Set<string>) {
 	metricNames.sort();
 	for (let i = 0; i < metricNames.length; i++) {
 		let metricName = metricNames[i];
-		let metricContainer = document.createElement("div");
+		let metricContainer = document.createElement("details");
 		metricContainer.id = `metric-${metricName}`;
+    metricContainer.open = true;
 
-		let divider = document.createElement("div");
+		let divider = document.createElement("summary");
 		divider.classList.add("divider");
 		divider.innerText = metricName;
 		metricContainer.appendChild(divider);
