@@ -28,6 +28,10 @@ jobs:
         run: |
           pnpm install -r
 
+      - name: rolldown version
+        run: |
+          npx envinfo --system --npmPackages rolldown --binaries --browsers
+
       - name: Run benchmarks
         run: |
           pnpm build
