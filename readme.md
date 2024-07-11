@@ -9,7 +9,7 @@ export interface Entry {
 	metric: string; // which metric for the bench, like `production build time`, `production build size`
 	timestamp: number; 
 	commit: string; // commit hash
-    repoUrl?: string; // what is the data source from, used for event tracking
+    	repoUrl?: string; // what is the data source from, used for event tracking
 	unit: string; // what is the data souce unit, like `ms`(in build speed bench), 'byte'(in build size bench)
 	records: Record<string, number>; // key is the bundler name, value is the result of the corresponding bundler
 }
