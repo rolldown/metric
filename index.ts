@@ -126,7 +126,7 @@ async function main() {
 				return;
 			}
 			let repoUrl =
-				(data.points[0] as any).repoUrl;
+				(data.points[data.points.length - 1 ] as any).repoUrl;
 			const url = repoUrl ? `${repoUrl.trimEnd("/")}/commit/${commit_hash}` : commit_hash;
 			console.log(`url: `, url);
 			const notification_text = `Commit <b>${commit_hash}</b> URL copied to clipboard`;
