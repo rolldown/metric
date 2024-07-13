@@ -1,16 +1,20 @@
 import { persistEntries } from "./utils.mjs";
+import * as path from 'node:path'
+import { fileURLToPath } from "node:url";
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 const compileTime = process.env.COMPILE_TIME;
+const commit = process.env.COMMIT_HASH || "";
 
 const entry = {
-	case: "Rolldown",
-  metric: "ReleaseRompileTime",
+	case: "rolldown self",
+	metric: "release rompile time",
 	timestamp: Date.now(),
-	commit: "",
+	commit,
 	unit: "s",
 	records: {
-    "rolldown": compileTime,
-  },
+		rolldown: compileTime,
+	},
 };
 
-persistEntries([entry]);
+persistEntries([entry], path.resolve(__dirname, "../metric.json"));
