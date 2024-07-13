@@ -85,7 +85,6 @@ async function main() {
 		}
 
 		Object.entries(data).forEach(([key, value]) => {
-			console.log(`data: `, value, key);
 			plot?.data.push({
 				name: key,
 				line: {
@@ -96,7 +95,7 @@ async function main() {
 				y: value,
 				hovertext: commit,
 				hovertemplate: `%{y} ${unit}<br>(%{hovertext})`,
-				repoUrl: repoUrl,
+				repoUrl: repoUrl
 			});
 		});
 	}
@@ -126,9 +125,8 @@ async function main() {
 				return;
 			}
 			let repoUrl =
-				(data.points[data.points.length - 1 ] as any).repoUrl;
+				(data.points[0] as any).data.repoUrl;
 			const url = repoUrl ? `${repoUrl.trimEnd("/")}/commit/${commit_hash}` : commit_hash;
-			console.log(`url: `, url);
 			const notification_text = `Commit <b>${commit_hash}</b> URL copied to clipboard`;
 			navigator.clipboard.writeText(url);
 			show_notification(notification_text);
@@ -183,14 +181,14 @@ function normalizeEntryDict(
 			commit.push(v.commit);
 			timestamp.push(v.timestamp);
 		}
-		metricSet.add(value[0].metric);
+		metricSet.add(value[value.length - 1].metric);
 		map[key] = {
 			data,
 			commit,
 			timestamp,
-			unit: value[0].unit,
-			metric: value[0].metric,
-			repoUrl: value[0].repoUrl,
+			unit: value[value.length - 1].unit,
+			metric: value[value.length - 1].metric,
+			repoUrl: value[value.length - 1].repoUrl,
 		};
 	});
 	return [map, metricSet];
