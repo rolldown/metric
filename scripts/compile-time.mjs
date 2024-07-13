@@ -5,6 +5,7 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 const compileTime = process.env.COMPILE_TIME;
 const commit = process.env.COMMIT_HASH || "";
+const repoUrl = process.env.GIT_REPOSITORY_URL || "";
 
 const entry = {
 	case: "rolldown self",
@@ -15,6 +16,7 @@ const entry = {
 	records: {
 		rolldown: compileTime,
 	},
+  repoUrl
 };
 
 persistEntries([entry], path.resolve(__dirname, "../metric.json"));
