@@ -96,7 +96,7 @@ async function main() {
 				y: value,
 				hovertext: commit,
 				hovertemplate: `%{y} ${unit}<br>(%{hovertext})`,
-				repoUrl: commit,
+				repoUrl: repoUrl,
 			});
 		});
 	}
@@ -126,9 +126,8 @@ async function main() {
 				return;
 			}
 			let repoUrl =
-				(data.points[0] as any).repoUrl ??
-				"https://github.com/rolldown/rolldown";
-			const url = `${repoUrl.trimEnd("/")}/commit/${commit_hash}`;
+				(data.points[0] as any).repoUrl;
+			const url = repoUrl ? `${repoUrl.trimEnd("/")}/commit/${commit_hash}` : commit_hash;
 			console.log(`url: `, url);
 			const notification_text = `Commit <b>${commit_hash}</b> URL copied to clipboard`;
 			navigator.clipboard.writeText(url);
