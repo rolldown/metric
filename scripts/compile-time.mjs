@@ -9,7 +9,7 @@ const repoUrl = process.env.GIT_REPOSITORY_URL || "";
 
 const entry = {
 	case: "rolldown self",
-	metric: "release rompile time",
+	metric: "release compile time",
 	timestamp: Date.now(),
 	commit,
 	unit: "s",
