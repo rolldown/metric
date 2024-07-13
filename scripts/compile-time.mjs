@@ -16,7 +16,7 @@ const entry = {
 	records: {
 		rolldown: compileTime,
 	},
-  repoUrl
+  repoUrl: repoUrl ? `https://github.com/${repoUrl}` : ""
 };
 
 persistEntries([entry], path.resolve(__dirname, "../metric.json"));
