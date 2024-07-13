@@ -2,6 +2,7 @@
 import { glob } from "glob";
 import * as fs from "fs";
 import * as path from "path";
+import { persistEntries } from "./utils.mjs";
 
 const __dirname = import.meta.dirname;
 const apps = fs.readdirSync(path.resolve(__dirname, "../packages"));
@@ -41,11 +42,4 @@ function toEntrys(recordMap, metric) {
 		});
 	});
 	return entries;
-}
-
-function persistEntries(entries, filename) {
-	for (let entry of entries) {
-		fs.writeFileSync(filename, JSON.stringify(entry), { flag: "a" });
-		fs.writeFileSync(filename, "\n", { flag: "a" });
-	}
 }
