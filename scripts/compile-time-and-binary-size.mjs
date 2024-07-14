@@ -6,8 +6,9 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const compileTime = process.env.COMPILE_TIME;
 const commit = process.env.COMMIT_HASH || "";
 const repoUrl = process.env.GIT_REPOSITORY_URL || "";
+const binarySize = process.env.BINARY_SIZE || "";
 
-const entry = {
+const compileTimeEntry = {
 	case: "rolldown self",
 	metric: "release compile time",
 	timestamp: Date.now(),
@@ -19,4 +20,16 @@ const entry = {
   repoUrl: repoUrl ? `https://github.com/${repoUrl}` : ""
 };
 
-persistEntries([entry], path.resolve(__dirname, "../metric.json"));
+const binarySizeEntry = {
+	case: "rolldown self",
+	metric: "release binary size",
+	timestamp: Date.now(),
+	commit,
+	unit: "byte",
+	records: {
+		rolldown: binarySize,
+	},
+  repoUrl: repoUrl ? `https://github.com/${repoUrl}` : ""
+};
+
+persistEntries([compileTimeEntry, binarySizeEntry], path.resolve(__dirname, "../metric.json"));
