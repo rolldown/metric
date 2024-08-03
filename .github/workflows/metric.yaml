@@ -27,6 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install -r
+          pnpm up rolldown@nightly # use latest nightly
 
       - name: rolldown version
         run: |
