@@ -1,4 +1,4 @@
-import { groupBy } from "lodash-es";
+import { groupBy, trimEnd } from "lodash-es";
 import { Entry, Metric, Plots } from "./types";
 import { initDataSource } from "./data-source";
 import "./style.css";
@@ -125,9 +125,9 @@ async function main() {
 				return;
 			}
 			let repoUrl =
-				(data.points[0] as any).data.repoUrl;
-			const url = repoUrl ? `${repoUrl.trimEnd("/")}/commit/${commit_hash}` : commit_hash;
-			const notification_text = `Commit <b>${commit_hash}</b> URL copied to clipboard`;
+				(data.points[0] as any).data.repoUrl ?? "https://github.com/rolldown/rolldown";
+			const url = repoUrl ? `${trimEnd(repoUrl, '/')}/commit/${commit_hash}` : commit_hash;
+			const notification_text = `URL of commit <b>${url}</b>  copied to clipboard`;
 			navigator.clipboard.writeText(url);
 			show_notification(notification_text);
 		});
