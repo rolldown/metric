@@ -1,15 +1,12 @@
-const path = require('path')
+const path = require("path");
 /**@type {import("webpack").Configuration}*/
 module.exports = {
   mode: "production",
   entry: {
-    "main": "./src/index.js"
+    main: "./src/index.js",
   },
-  optimization: {
-    minimize: false,
-    mangleExports: false
-  },
+  optimization: {},
   output: {
-    path: path.resolve(__dirname, "webpack-dist")
-  }
-}
+    path: path.resolve(__dirname, "webpack-dist"),
+  },
+};
