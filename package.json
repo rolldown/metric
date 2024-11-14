@@ -1,15 +1,17 @@
 {
 	"devDependencies": {
+		"@rollup/plugin-terser": "^0.4.4",
 		"envinfo": "^7.13.0",
 		"esbuild": "^0.21.5",
 		"glob": "^10.4.2",
 		"parcel": "^2.12.0",
-		"rolldown": "nightly",
+		"rolldown": "0.14.0-snapshot-d5e797b-20241114003621",
 		"vite": "^5.3.1",
 		"webpack": "^5.92.1",
 		"webpack-cli": "^5.1.4"
 	},
 	"scripts": {
 		"build": "pnpm run -r build"
-	}
+	},
+	"packageManager": "pnpm@8.15.7+sha512.c85cd21b6da10332156b1ca2aa79c0a61ee7ad2eb0453b88ab299289e9e8ca93e6091232b25c07cbf61f6df77128d9c849e5c9ac6e44854dbd211c49f3a67adc"
 }
