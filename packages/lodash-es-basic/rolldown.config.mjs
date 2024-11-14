@@ -2,7 +2,7 @@ import { defineConfig } from "rolldown";
 import terser from "@rollup/plugin-terser";
 
 export default defineConfig({
-  input: "./src/index.jsx",
+  input: "./src/index.js",
   output: {
     dir: "rolldown-dist",
   },
