@@ -4,7 +4,7 @@ import { FluentProvider, teamsLightTheme, Button } from '@fluentui/react-compone
 
 function ExampleApp() {
   return <FluentProvider theme={teamsLightTheme}>
-    <Button>Fluent React</Button>
+    <Button onClick={() => {console.log('hello')}}>Fluent React</Button>
   </FluentProvider>
 }
 
