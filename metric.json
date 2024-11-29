@@ -2310,3 +2310,5 @@
 {"case":"react-fluent-hydration","metric":"production build size","timestamp":1732844997718,"commit":"","unit":"byte","records":{"parcel":211800,"esbuild":238834,"rolldown":210007,"webpack":206739}}
 {"case":"rolldown self","metric":"release compile time","timestamp":1732867764738,"commit":"8d5a47027a5b8945462b215358205e7eecd508a2","unit":"s","records":{"rolldown":"272.94"},"repoUrl":"https://github.com/rolldown/rolldown"}
 {"case":"rolldown self","metric":"release binary size","timestamp":1732867764738,"commit":"8d5a47027a5b8945462b215358205e7eecd508a2","unit":"byte","records":{"rolldown":"15667000"},"repoUrl":"https://github.com/rolldown/rolldown"}
+{"case":"rolldown self","metric":"release compile time","timestamp":1732874653479,"commit":"e3bc3ab097b3c82001e72c20c2ee4e4ba4040f09","unit":"s","records":{"rolldown":"293.22"},"repoUrl":"https://github.com/rolldown/rolldown"}
+{"case":"rolldown self","metric":"release binary size","timestamp":1732874653479,"commit":"e3bc3ab097b3c82001e72c20c2ee4e4ba4040f09","unit":"byte","records":{"rolldown":"15667000"},"repoUrl":"https://github.com/rolldown/rolldown"}
