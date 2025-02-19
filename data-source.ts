@@ -29,7 +29,6 @@ class BasicDataSource implements DataSource {
 		return this.normalized(source);
 	}
 }
-
 export async function initDataSource(): Promise<Entry[]> {
 	const res = await Promise.all([
 		new NetWorkDataSource(
