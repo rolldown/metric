@@ -6,6 +6,6 @@ module.exports = {
     main: "./src/index.js",
   },
   output: {
-    path: path.resolve(__dirname, "webpack-dist"),
+    path: path.resolve(__dirname, "rspack-dist"),
   },
 };

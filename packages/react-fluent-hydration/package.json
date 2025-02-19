@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build:webpack": "webpack",
+    "build:rspack": "rspack build",
     "build:esbuild": "esbuild src/index.jsx --bundle --minify --outfile=esbuild-dist/index.js",
     "build:parcel": "parcel build src/index.jsx --dist-dir parcel-dist --no-source-maps --no-cache",
     "build:rolldown": "rolldown --config ./rolldown.config.mjs",
@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@fluentui/react-components": "^9.54.2",
-    "lodash-es": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

@@ -8,7 +8,7 @@ const __dirname = import.meta.dirname;
 const apps = fs.readdirSync(path.resolve(__dirname, "../packages"));
 
 let recordMap = {};
-const dists = ["parcel-dist", "esbuild-dist", "rolldown-dist", "webpack-dist"];
+const dists = ["parcel-dist", "esbuild-dist", "rolldown-dist", "rspack-dist"];
 
 for (let i = 0; i < apps.length; i++) {
 	let app = apps[i];
@@ -27,9 +27,9 @@ for (let i = 0; i < apps.length; i++) {
 	recordMap[app] = appRecord;
 }
 
-const entries = toEntrys(recordMap, "production build size");
+const entries = toEntries(recordMap, "production build size");
 persistEntries(entries, path.resolve(__dirname, "../metric.json"));
-function toEntrys(recordMap, metric) {
+function toEntries(recordMap, metric) {
 	let entries = [];
 	Object.entries(recordMap).forEach(([app, records]) => {
 		entries.push({
