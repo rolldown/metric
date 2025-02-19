@@ -5,7 +5,6 @@ module.exports = {
   entry: {
     main: "./src/index.js",
   },
-  optimization: {},
   output: {
     path: path.resolve(__dirname, "webpack-dist"),
   },
