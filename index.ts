@@ -169,15 +169,25 @@ function normalizeEntryDict(
 		let data: Record<string, number[]> = {};
 		let commit: string[] = [];
 		let timestamp: number[] = [];
-
+    let totalSet = new Set<string>();
+    value.forEach(v => {
+      Object.keys(v.records).forEach(key => {
+        totalSet.add(key);
+      })
+    })
+    for (let key of totalSet) {
+      data[key] = [];
+    }
 		for (let i = 0; i < value.length; i++) {
 			let v = value[i];
 			Object.entries(v.records).forEach(([key, value]) => {
-				if (data[key] === undefined) {
-					data[key] = [];
-				}
-				data[key].push(value);
+        data[key].push(value);
 			});
+      for (let key of totalSet) {
+        if (!v.records[key]) {
+          data[key].push(undefined!);
+        }
+      }
 			commit.push(v.commit);
 			timestamp.push(v.timestamp);
 		}
