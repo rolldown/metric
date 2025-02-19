@@ -1,5 +1,5 @@
 import { defineConfig } from "rolldown";
-import terser from "@rollup/plugin-terser";
+import { minify } from "rollup-plugin-swc3";
 
 export default defineConfig({
   input: "./src/index.js",
@@ -9,10 +9,15 @@ export default defineConfig({
   define: {
     "process.env.NODE_ENV": JSON.stringify("production"),
   },
+  profilerNames: false,
   plugins: [
-    terser({
-      maxWorkers: 1,
-      sourceMap: false
-    }),
+    minify({
+      module: true,
+      // swc's minify option here
+      mangle: {
+        toplevel: true,
+      },
+      compress: {},
+    })
   ],
 });
