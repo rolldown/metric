@@ -13,7 +13,7 @@ importers:
         version: 1.2.7(@rspack/core@1.2.7)
       envinfo:
         specifier: ^7.13.0
-        version: 7.13.0
+        version: 7.14.0
       esbuild:
         specifier: ^0.25.0
         version: 0.25.0
@@ -4165,7 +4165,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001702
-      electron-to-chromium: 1.5.112
+      electron-to-chromium: 1.5.113
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.4)
     dev: true
@@ -4572,8 +4572,8 @@ packages:
     resolution: {integrity: sha512-Kaxhu4T7SJGpRQx99tq216gCq2nMxJo+uuT6uzz9l8TVN2stL7M06MIIXAtr9jsrLs2Glflgf2vMQRepxawOdQ==}
     dev: true
 
-  /electron-to-chromium@1.5.112:
-    resolution: {integrity: sha512-oen93kVyqSb3l+ziUgzIOlWt/oOuy4zRmpwestMn4rhFWAoFJeFuCVte9F2fASjeZZo7l/Cif9TiyrdW4CwEMA==}
+  /electron-to-chromium@1.5.113:
+    resolution: {integrity: sha512-wjT2O4hX+wdWPJ76gWSkMhcHAV2PTMX+QetUCPYEdCIe+cxmgzzSSiGRCKW8nuh4mwKZlpv0xvoW7OF2X+wmHg==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -4616,8 +4616,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /envinfo@7.13.0:
-    resolution: {integrity: sha512-cvcaMr7KqXVh4nyzGTVqTum+gAiL265x5jUWQIDLq//zOGbW+gSW/C+OWLleY/rs9Qole6AZLMXPbtIFQbqu+Q==}
+  /envinfo@7.14.0:
+    resolution: {integrity: sha512-CO40UI41xDQzhLB1hWyqUKgFhs250pNcGbyGKe1l/e4FSaI/+YE4IMG76GDt0In67WLPACIITC+sOi08x4wIvg==}
     engines: {node: '>=4'}
     hasBin: true
     dev: true
