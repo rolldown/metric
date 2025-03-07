@@ -42,5 +42,6 @@ runs:
         pnpm up rolldown@nightly # use latest nightly
 
     - name: rolldown version
+      shell: bash
       run: |
         npx envinfo --system --npmPackages rolldown --binaries --browsers
