@@ -1,0 +1,17 @@
+name: CI used by pull_request
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Preparation
+        uses: ./.github/actions/build/action.yml
+
+      - name: build
+        run: |
+          pnpm build
+
