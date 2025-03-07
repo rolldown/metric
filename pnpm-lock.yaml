@@ -13,7 +13,7 @@ importers:
         version: 1.2.7(@rspack/core@1.2.7)
       envinfo:
         specifier: ^7.13.0
-        version: 7.13.0
+        version: 7.14.0
       esbuild:
         specifier: ^0.25.0
         version: 0.25.0
@@ -4482,8 +4482,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /envinfo@7.13.0:
-    resolution: {integrity: sha512-cvcaMr7KqXVh4nyzGTVqTum+gAiL265x5jUWQIDLq//zOGbW+gSW/C+OWLleY/rs9Qole6AZLMXPbtIFQbqu+Q==}
+  /envinfo@7.14.0:
+    resolution: {integrity: sha512-CO40UI41xDQzhLB1hWyqUKgFhs250pNcGbyGKe1l/e4FSaI/+YE4IMG76GDt0In67WLPACIITC+sOi08x4wIvg==}
     engines: {node: '>=4'}
     hasBin: true
     dev: true
