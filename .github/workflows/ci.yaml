@@ -1,0 +1,20 @@
+name: CI used by pull_request
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Preparation
+        uses: ./.github/actions/build
+
+      - name: build
+        run: |
+          pnpm build
+

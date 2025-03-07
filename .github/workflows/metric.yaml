@@ -13,25 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8.15.7
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'  # Specify the Node.js version you need
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: |
-          pnpm install -r
-          pnpm up rolldown@nightly # use latest nightly
-
-      - name: rolldown version
-        run: |
-          npx envinfo --system --npmPackages rolldown --binaries --browsers
+      - name: Preparation
+        uses: ./.github/actions/build/action.yml
 
       - name: Run benchmarks
         run: |
