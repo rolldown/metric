@@ -28,7 +28,7 @@ importers:
         version: 0.11.10
       rolldown:
         specifier: nightly
-        version: 1.0.0-beta.6-commit.a250548
+        version: 1.0.0-beta.7-commit.218ee9d
       rollup-plugin-swc3:
         specifier: ^0.12.1
         version: 0.12.1(@swc/core@1.11.13(@swc/helpers@0.5.15))(rollup@4.37.0)
@@ -43,7 +43,7 @@ importers:
     dependencies:
       '@fluentui/react-components':
         specifier: ^9.54.2
-        version: 9.61.2(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
+        version: 9.61.3(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -68,8 +68,8 @@ packages:
     resolution: {integrity: sha512-Ed61U6XJc3CVRfkERJWDz4dJwKe7iLmmJsbOGu9wSloNSFttHV0I8g6UAgb7qnK5ly5bGLPd4oXZlxCdANBOWQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/runtime@7.26.10':
-    resolution: {integrity: sha512-2WJMeRQPHKSPemqk/awGrAiuFfzBmOIPXKizAsVhWH9YJqLZ0H+HS4c8loHGgW6utJ3E/ejXQUsiGaQy2NZ9Fw==}
+  '@babel/runtime@7.27.0':
+    resolution: {integrity: sha512-VtPOkrdPHZsKc/clNqyi9WUA8TINkZ4cGk63UUE3u4pmB2k+ZMQRDuIOagv8UVd6j7k0T3+RRIb7beKTebNbcw==}
     engines: {node: '>=6.9.0'}
 
   '@ctrl/tinycolor@3.6.1':
@@ -364,8 +364,8 @@ packages:
       react: '>=16.14.0 <19.0.0'
       react-dom: '>=16.14.0 <19.0.0'
 
-  '@fluentui/react-components@9.61.2':
-    resolution: {integrity: sha512-Cg5XBJnj2+jF7gr6pGk8Bi+HOW5wTDn0fruwOf+y7a45MXT16PiWGSkeyqYCiU0jF9q6OgTPWWAW+xdQhJe+6A==}
+  '@fluentui/react-components@9.61.3':
+    resolution: {integrity: sha512-WqCPzHzmUbSvMeTYRhFQ8EJsBMjeJVMuX00Ik1ib2X7awPVN0zAMimad9aPQXsTRGYJ8M/Zk6G7oLa+T9czuEg==}
     peerDependencies:
       '@types/react': '>=16.14.0 <19.0.0'
       '@types/react-dom': '>=16.9.0 <19.0.0'
@@ -614,8 +614,8 @@ packages:
       react: '>=16.14.0 <19.0.0'
       react-dom: '>=16.14.0 <19.0.0'
 
-  '@fluentui/react-slider@9.3.2':
-    resolution: {integrity: sha512-JD1JYsXpfeUhpCo0ohMy0Cihtjfq3BZX//80h5wx8dTWIBAfEgioARMjGiBN9IcpBwUkZKw5/uhFalUtXO7L3A==}
+  '@fluentui/react-slider@9.3.3':
+    resolution: {integrity: sha512-oTaU0aPncSjCmo0i2P6+ka+qeLi/llPqRkJBe9cJILIZinXXHphsYiDAR6SNstCvwVs2Zo3DppZYU12GSOFLJQ==}
     peerDependencies:
       '@types/react': '>=16.14.0 <19.0.0'
       '@types/react-dom': '>=16.9.0 <19.0.0'
@@ -745,8 +745,8 @@ packages:
       react: '>=16.14.0 <19.0.0'
       react-dom: '>=16.14.0 <19.0.0'
 
-  '@fluentui/react-tree@9.10.3':
-    resolution: {integrity: sha512-iDMFfCgjN2CQD+j/qaIWQa3b5ILfM+DEe/w7njp08jWkJpfCvT1X/rF2gJFjuv68BtR7jbiVS1Q9ySTrQx8Z4Q==}
+  '@fluentui/react-tree@9.10.4':
+    resolution: {integrity: sha512-G0LdvfB3lTQ3L39VwU1kMVPJv1t+msWRuZ7gwBdTHAt1WAkUrqozKyFnGcRcOmJtZvkVxb12yEzuu31WHHHkTQ==}
     peerDependencies:
       '@types/react': '>=16.14.0 <19.0.0'
       '@types/react-dom': '>=16.9.0 <19.0.0'
@@ -1249,63 +1249,63 @@ packages:
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
-  '@rolldown/binding-darwin-arm64@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-BtsU+yXAOiirYw1nGu3f8OTHEUhk9F42Cg1vWoh5wRtmu6CP5oM4c7JrVfjdjFtCsK8MtrO9W0R51syh/7AWZg==}
+  '@rolldown/binding-darwin-arm64@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-QnUSTrp7q3RH0zA7I4AOV2m51igRKeu8CTOttLc3QVj+g3wyWivM8EJnhXMXQ/G44GF+FoCCbYSsTWJf4y0lPw==}
     cpu: [arm64]
     os: [darwin]
 
-  '@rolldown/binding-darwin-x64@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-kHGN2G0/8WgvO2ArKG0g7iHk6iqgPVCXd0Gt/WmTOhLnIRNffbU/n06DSWgpc/LNiLIsw3+9FxwOs+cmLvdUqA==}
+  '@rolldown/binding-darwin-x64@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-rvxEQs4xTOo09k9OR+cI2QOIPUaYB3SXz/STHKlTLgCyLTjKNfHuvmBjiOFVr5bbFlKonoxo6VdeIvQx77p9eQ==}
     cpu: [x64]
     os: [darwin]
 
-  '@rolldown/binding-freebsd-x64@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-88WiVDdF0AL6sFvMbsGROVUewqB9i9FaasvfkzHZfITcg1wOJ/RDpJSfQm48QWRB6MsX0ByGYOcTwh7vTdSgIQ==}
+  '@rolldown/binding-freebsd-x64@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-moseR+v7UhhQDM3HqUvOg6pboqYtNL44J8jW0jqRpJhUQAdHS3X1ZbyySFa4uHjAAOC7zMB89IRCbvaLx1OCUQ==}
     cpu: [x64]
     os: [freebsd]
 
-  '@rolldown/binding-linux-arm-gnueabihf@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-ybJjfhSLWfGGig8F4q6VkB6I11I+wWvAJ5kUrWVd7BCHN+cY3LK4s04IUHtnx2kTC8cKKDF299Nk+318Q8Hs3Q==}
+  '@rolldown/binding-linux-arm-gnueabihf@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-GdfEDKIEahXs9SoMjKoI5xtUgG+CEzecVgU+Ms0A0XDGTNxbNx3SNy1UGpHRzdnkn2EFUTCPuZ5q79uCgqbDrQ==}
     cpu: [arm]
     os: [linux]
 
-  '@rolldown/binding-linux-arm64-gnu@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-pIpLO8at+PuVF/Gtfl/HsfWUMP2apxdOabop7Knjm2cemoh/OQnOyJ2FhcrMEJYldPN0qaOntMsXJiUUQL/Pdw==}
+  '@rolldown/binding-linux-arm64-gnu@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-sRBsmeVmVnyAUSzR1l8B+oilrzmR8wqbb8lbatq8/qQwWAm5qkX8qIf+CoQu3tiK4wovVAVgn7mBJ0rLcZNU2g==}
     cpu: [arm64]
     os: [linux]
 
-  '@rolldown/binding-linux-arm64-musl@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-evo1GuUyFPLQlY2jCEu0BgUbfVcg/rcLN/RXhD2bvMiSbklKrirweysp7k7mbiNQcEklhNwllCnIx23PGtRkgQ==}
+  '@rolldown/binding-linux-arm64-musl@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-yxNi+Y7fNg/cGSP3F1Xh0mCDzXisOaV+tvtexdNKu8D3lXUW3rj+YRrixC7PV2xLt7L3vCUDrdldNaDmD87A8g==}
     cpu: [arm64]
     os: [linux]
 
-  '@rolldown/binding-linux-x64-gnu@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-SBz7tOfwJE74t4us3zzjYhBFAw3E5mJCOOAN2ZEmQ+YBmv9wIT5rt4KY4XQv5dng7iMS7TfDz+t/MK0ZcOva2A==}
+  '@rolldown/binding-linux-x64-gnu@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-FbwqdJkwRiGcsNYXB2Xj725iL+8Ifi1J/u+KFPcTTm2ZoLxXJNdLFJgxWwKzfz9GIiyBjWWJ7tAdqIacbniXjw==}
     cpu: [x64]
     os: [linux]
 
-  '@rolldown/binding-linux-x64-musl@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-njocaJ+Zh4bccPMb4vafM4MfG6zKn83+VxwjvjH/5z1StKmqK5IlXwwOvRSMcxULUeM4jCl1bmftTLQn8MnoxQ==}
+  '@rolldown/binding-linux-x64-musl@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-smydpBE6tbWALOhBLQvmylQHPLLxNHQEiT68sLooi1WefAvdmx9iWoQhGV3pL9cLrjaaaWEpYOge6s/d3+yldQ==}
     cpu: [x64]
     os: [linux]
 
-  '@rolldown/binding-wasm32-wasi@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-cpIVq/Yfprwp9CfGephil3rnWjDfLH04j24yHniFGF/KxOY9bgbY+J3C93IB6VE5FDWWcsprvzCVh1gtNOwZgg==}
+  '@rolldown/binding-wasm32-wasi@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-4TY6GLp4qvytKBf0b+OVfZQJThTvqFdA2XULbcV73sm6ehVpyoZtqv/mBMG0gc25YpLqpdrejTGoY+5wE2CdiA==}
     engines: {node: '>=14.21.3'}
     cpu: [wasm32]
 
-  '@rolldown/binding-win32-arm64-msvc@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-gyqplrKnHN2vtObrhD3h+8HyFBEt3CaIfQhnkFgy+Mn4Rwo9+rnLgjmkuUk6BvWUSSw77uarjBQ+ftzfLEzt2w==}
+  '@rolldown/binding-win32-arm64-msvc@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-pTXcvht5gNCMMevXkHe9fVg1h4iGf6c5HEnIVrJNdtWU3s8hDQmK4UGJ2PuLBNe47Ln15kif67kVWxKyYsYxlQ==}
     cpu: [arm64]
     os: [win32]
 
-  '@rolldown/binding-win32-ia32-msvc@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-B137mjLihBpyATJlMhYIrxvoJhKJu7z9dsZa/5KpBK/lZ4v3MSE0s6Og9AyaC/H4GmsxhhU8t4K0u4WwR4GWcA==}
+  '@rolldown/binding-win32-ia32-msvc@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-niJ7PdZJ+LRnaz8FNTeuUuIQc3U4tVJUkMEXt0m1BEM7PlO2lftpcIEEpKjrtpPKkosz+KKeSJb2vYTWBf1kLw==}
     cpu: [ia32]
     os: [win32]
 
-  '@rolldown/binding-win32-x64-msvc@1.0.0-beta.6-commit.a250548':
-    resolution: {integrity: sha512-an/7NexpdT5u2Nhga2gEHIGdBgw1/aVJy3e0/6Kmg+vS9AdYv5uO5ejj9bUpXbhYA3NjRj1xK4nZdLex6lemcw==}
+  '@rolldown/binding-win32-x64-msvc@1.0.0-beta.7-commit.218ee9d':
+    resolution: {integrity: sha512-Ih9mjztXkVH/6biJd+xUspMwA4ERKFgADxv1amEUuS/81rH3ASCswsq31OHxbxhsHQ5qC5SuKcuW65CjdDU4ag==}
     cpu: [x64]
     os: [win32]
 
@@ -1600,6 +1600,9 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
+  '@types/estree@1.0.7':
+    resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
+
   '@types/express-serve-static-core@4.19.6':
     resolution: {integrity: sha512-N4LZ2xG7DatVqhCZzOGb1Yi5lMbXSZcmdLDe9EzSndPV2HpWYWzRbaerl2n27irrm94EPpprqa8KpskPT085+A==}
 
@@ -1627,8 +1630,8 @@ packages:
   '@types/node@22.13.11':
     resolution: {integrity: sha512-iEUCUJoU0i3VnrCmgoWCXttklWcvoCIx4jzcP22fioIVSdTmjgoEvmAO/QPw6TcS9k5FrNgn4w7q5lGOd1CT5g==}
 
-  '@types/node@22.13.12':
-    resolution: {integrity: sha512-ixiWrCSRi33uqBMRuICcKECW7rtgY43TbsHDpM2XK7lXispd48opW+0IXrBVxv9NMhaz/Ue9kyj6r3NTVyXm8A==}
+  '@types/node@22.13.13':
+    resolution: {integrity: sha512-ClsL5nMwKaBRwPcCvH8E7+nU4GxHVx1axNvMZTFHMEfNI7oahimt26P5zjVCRrjiIWj6YFXfE1v3dEp94wLcGQ==}
 
   '@types/prop-types@15.7.14':
     resolution: {integrity: sha512-gNMvNH49DJ7OJYv+KAKn0Xp45p8PLl6zo2YnvDIbTd4J6MER2BmWN49TG7n9LvkyihINxeKW8+3bfS2yDC9dzQ==}
@@ -1668,10 +1671,10 @@ packages:
   '@types/ws@8.18.0':
     resolution: {integrity: sha512-8svvI3hMyvN0kKCJMvTJP/x6Y/EoQbepff882wL+Sn5QsXb3etnamgrJq4isrBxSJj5L2AuXcI0+bgkoAXGUJw==}
 
-  '@valibot/to-json-schema@1.0.0-rc.0':
-    resolution: {integrity: sha512-F3WDgnPzcDs9Y8qZwU9qfPnEJBQ6lCMCFjI7VsMjAza6yAixGr4cZ50gOy6zniSCk49GkFvq2a6cBKfZjTpyOw==}
+  '@valibot/to-json-schema@1.0.0':
+    resolution: {integrity: sha512-/9crJgPptVsGCL6X+JPDQyaJwkalSZ/52WuF8DiRUxJgcmpNdzYRfZ+gqMEP8W3CTVfuMWPqqvIgfwJ97f9Etw==}
     peerDependencies:
-      valibot: ^1.0.0 || ^1.0.0-beta.5 || ^1.0.0-rc
+      valibot: ^1.0.0
 
   '@webassemblyjs/ast@1.14.1':
     resolution: {integrity: sha512-nuBEDgQfm1ccRp/8bCQrx1frohyufl4JlbMMZ4P1wpeOfDhF6FQkxZJ1b/e+PLwr6X1Nhw6OLme5usuBWYBvuQ==}
@@ -2916,8 +2919,8 @@ packages:
     resolution: {integrity: sha512-l0OE8wL34P4nJH/H2ffoaniAokM2qSmrtXHmlpvYr5AVVX8msAyW0l8NVJFDxlSK4u3Uh/f41cQheDVdnYijwQ==}
     hasBin: true
 
-  rolldown@1.0.0-beta.6-commit.a250548:
-    resolution: {integrity: sha512-uq3lMnv8TDIucJtRtIxo/b/ffMQGlXdRPWvfbV1X4Y4ze5j/grhGxaFB1Ts6sk8GZjBQTSUqjcT1DeGEx91NZw==}
+  rolldown@1.0.0-beta.7-commit.218ee9d:
+    resolution: {integrity: sha512-RiukZYtHoLl21Nk350BikklPE9CHehq8qI75SI7Da+EdS18ZQSresl6JBxpke4l1n/ZRrzc0WMFKXWlj7XNKlA==}
     hasBin: true
     peerDependencies:
       '@oxc-project/runtime': 0.61.2
@@ -3227,8 +3230,8 @@ packages:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
     hasBin: true
 
-  valibot@1.0.0-rc.4:
-    resolution: {integrity: sha512-VRaChgFv7Ab0P54AMLu7+GqoexdTPQ54Plj59X9qV0AFozI3j9CGH43skg+TqgMpXnrW8jxlJ2TTHAtAD3t4qA==}
+  valibot@1.0.0:
+    resolution: {integrity: sha512-1Hc0ihzWxBar6NGeZv7fPLY0QuxFMyxwYR2sF1Blu7Wq7EnremwY2W02tit2ij2VJT8HcSkHAQqmFfl77f73Yw==}
     peerDependencies:
       typescript: '>=5'
     peerDependenciesMeta:
@@ -3357,7 +3360,7 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.25.9': {}
 
-  '@babel/runtime@7.26.10':
+  '@babel/runtime@7.27.0':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -3707,7 +3710,7 @@ snapshots:
     transitivePeerDependencies:
       - scheduler
 
-  '@fluentui/react-components@9.61.2(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)':
+  '@fluentui/react-components@9.61.3(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)':
     dependencies:
       '@fluentui/react-accordion': 9.6.3(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
       '@fluentui/react-alert': 9.0.0-beta.124(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
@@ -3748,7 +3751,7 @@ snapshots:
       '@fluentui/react-select': 9.2.2(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
       '@fluentui/react-shared-contexts': 9.23.0(@types/react@18.3.19)(react@19.0.0)
       '@fluentui/react-skeleton': 9.2.2(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
-      '@fluentui/react-slider': 9.3.2(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
+      '@fluentui/react-slider': 9.3.3(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
       '@fluentui/react-spinbutton': 9.3.2(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
       '@fluentui/react-spinner': 9.5.9(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@fluentui/react-swatch-picker': 9.2.2(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
@@ -3765,7 +3768,7 @@ snapshots:
       '@fluentui/react-toast': 9.4.3(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@fluentui/react-toolbar': 9.4.1(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
       '@fluentui/react-tooltip': 9.6.2(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@fluentui/react-tree': 9.10.3(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
+      '@fluentui/react-tree': 9.10.4(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
       '@fluentui/react-utilities': 9.18.22(@types/react@18.3.19)(react@19.0.0)
       '@fluentui/react-virtualizer': 9.0.0-alpha.94(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@griffel/react': 1.5.29(react@19.0.0)
@@ -4245,7 +4248,7 @@ snapshots:
     transitivePeerDependencies:
       - scheduler
 
-  '@fluentui/react-slider@9.3.2(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)':
+  '@fluentui/react-slider@9.3.3(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)':
     dependencies:
       '@fluentui/react-field': 9.2.2(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)
       '@fluentui/react-jsx-runtime': 9.0.52(@types/react@18.3.19)(react@19.0.0)
@@ -4544,7 +4547,7 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@fluentui/react-tree@9.10.3(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)':
+  '@fluentui/react-tree@9.10.4(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(scheduler@0.25.0)':
     dependencies:
       '@fluentui/keyboard-keys': 9.0.8
       '@fluentui/react-aria': 9.14.2(@types/react-dom@18.3.5(@types/react@18.3.19))(@types/react@18.3.19)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -5398,42 +5401,42 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@rolldown/binding-darwin-arm64@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-darwin-arm64@1.0.0-beta.7-commit.218ee9d':
     optional: true
 
-  '@rolldown/binding-darwin-x64@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-darwin-x64@1.0.0-beta.7-commit.218ee9d':
     optional: true
 
-  '@rolldown/binding-freebsd-x64@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-freebsd-x64@1.0.0-beta.7-commit.218ee9d':
     optional: true
 
-  '@rolldown/binding-linux-arm-gnueabihf@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-linux-arm-gnueabihf@1.0.0-beta.7-commit.218ee9d':
     optional: true
 
-  '@rolldown/binding-linux-arm64-gnu@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-linux-arm64-gnu@1.0.0-beta.7-commit.218ee9d':
     optional: true
 
-  '@rolldown/binding-linux-arm64-musl@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-linux-arm64-musl@1.0.0-beta.7-commit.218ee9d':
     optional: true
 
-  '@rolldown/binding-linux-x64-gnu@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-linux-x64-gnu@1.0.0-beta.7-commit.218ee9d':
     optional: true
 
-  '@rolldown/binding-linux-x64-musl@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-linux-x64-musl@1.0.0-beta.7-commit.218ee9d':
     optional: true
 
-  '@rolldown/binding-wasm32-wasi@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-wasm32-wasi@1.0.0-beta.7-commit.218ee9d':
     dependencies:
       '@napi-rs/wasm-runtime': 0.2.7
     optional: true
 
-  '@rolldown/binding-win32-arm64-msvc@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-win32-arm64-msvc@1.0.0-beta.7-commit.218ee9d':
     optional: true
 
-  '@rolldown/binding-win32-ia32-msvc@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-win32-ia32-msvc@1.0.0-beta.7-commit.218ee9d':
     optional: true
 
-  '@rolldown/binding-win32-x64-msvc@1.0.0-beta.6-commit.a250548':
+  '@rolldown/binding-win32-x64-msvc@1.0.0-beta.7-commit.218ee9d':
     optional: true
 
   '@rollup/pluginutils@5.1.4(rollup@4.37.0)':
@@ -5678,14 +5681,16 @@ snapshots:
   '@types/eslint-scope@3.7.7':
     dependencies:
       '@types/eslint': 9.6.1
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.7
 
   '@types/eslint@9.6.1':
     dependencies:
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.7
       '@types/json-schema': 7.0.15
 
   '@types/estree@1.0.6': {}
+
+  '@types/estree@1.0.7': {}
 
   '@types/express-serve-static-core@4.19.6':
     dependencies:
@@ -5726,7 +5731,7 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
-  '@types/node@22.13.12':
+  '@types/node@22.13.13':
     dependencies:
       undici-types: 6.20.0
 
@@ -5772,9 +5777,9 @@ snapshots:
     dependencies:
       '@types/node': 22.13.11
 
-  '@valibot/to-json-schema@1.0.0-rc.0(valibot@1.0.0-rc.4)':
+  '@valibot/to-json-schema@1.0.0(valibot@1.0.0)':
     dependencies:
-      valibot: 1.0.0-rc.4
+      valibot: 1.0.0
 
   '@webassemblyjs/ast@1.14.1':
     dependencies:
@@ -6098,7 +6103,7 @@ snapshots:
 
   dom-helpers@5.2.1:
     dependencies:
-      '@babel/runtime': 7.26.10
+      '@babel/runtime': 7.27.0
       csstype: 3.1.3
 
   dom-serializer@1.4.1:
@@ -6570,7 +6575,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.13.12
+      '@types/node': 22.13.13
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -6946,7 +6951,7 @@ snapshots:
 
   react-transition-group@4.4.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
-      '@babel/runtime': 7.26.10
+      '@babel/runtime': 7.27.0
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
@@ -7003,24 +7008,24 @@ snapshots:
     dependencies:
       glob: 10.4.5
 
-  rolldown@1.0.0-beta.6-commit.a250548:
+  rolldown@1.0.0-beta.7-commit.218ee9d:
     dependencies:
       '@oxc-project/types': 0.61.2
-      '@valibot/to-json-schema': 1.0.0-rc.0(valibot@1.0.0-rc.4)
-      valibot: 1.0.0-rc.4
+      '@valibot/to-json-schema': 1.0.0(valibot@1.0.0)
+      valibot: 1.0.0
     optionalDependencies:
-      '@rolldown/binding-darwin-arm64': 1.0.0-beta.6-commit.a250548
-      '@rolldown/binding-darwin-x64': 1.0.0-beta.6-commit.a250548
-      '@rolldown/binding-freebsd-x64': 1.0.0-beta.6-commit.a250548
-      '@rolldown/binding-linux-arm-gnueabihf': 1.0.0-beta.6-commit.a250548
-      '@rolldown/binding-linux-arm64-gnu': 1.0.0-beta.6-commit.a250548
-      '@rolldown/binding-linux-arm64-musl': 1.0.0-beta.6-commit.a250548
-      '@rolldown/binding-linux-x64-gnu': 1.0.0-beta.6-commit.a250548
-      '@rolldown/binding-linux-x64-musl': 1.0.0-beta.6-commit.a250548
-      '@rolldown/binding-wasm32-wasi': 1.0.0-beta.6-commit.a250548
-      '@rolldown/binding-win32-arm64-msvc': 1.0.0-beta.6-commit.a250548
-      '@rolldown/binding-win32-ia32-msvc': 1.0.0-beta.6-commit.a250548
-      '@rolldown/binding-win32-x64-msvc': 1.0.0-beta.6-commit.a250548
+      '@rolldown/binding-darwin-arm64': 1.0.0-beta.7-commit.218ee9d
+      '@rolldown/binding-darwin-x64': 1.0.0-beta.7-commit.218ee9d
+      '@rolldown/binding-freebsd-x64': 1.0.0-beta.7-commit.218ee9d
+      '@rolldown/binding-linux-arm-gnueabihf': 1.0.0-beta.7-commit.218ee9d
+      '@rolldown/binding-linux-arm64-gnu': 1.0.0-beta.7-commit.218ee9d
+      '@rolldown/binding-linux-arm64-musl': 1.0.0-beta.7-commit.218ee9d
+      '@rolldown/binding-linux-x64-gnu': 1.0.0-beta.7-commit.218ee9d
+      '@rolldown/binding-linux-x64-musl': 1.0.0-beta.7-commit.218ee9d
+      '@rolldown/binding-wasm32-wasi': 1.0.0-beta.7-commit.218ee9d
+      '@rolldown/binding-win32-arm64-msvc': 1.0.0-beta.7-commit.218ee9d
+      '@rolldown/binding-win32-ia32-msvc': 1.0.0-beta.7-commit.218ee9d
+      '@rolldown/binding-win32-x64-msvc': 1.0.0-beta.7-commit.218ee9d
     transitivePeerDependencies:
       - typescript
 
@@ -7067,7 +7072,7 @@ snapshots:
 
   rtl-css-js@1.16.1:
     dependencies:
-      '@babel/runtime': 7.26.10
+      '@babel/runtime': 7.27.0
 
   run-applescript@7.0.0: {}
 
@@ -7362,7 +7367,7 @@ snapshots:
 
   uuid@8.3.2: {}
 
-  valibot@1.0.0-rc.4: {}
+  valibot@1.0.0: {}
 
   vary@1.1.2: {}
 
@@ -7448,7 +7453,7 @@ snapshots:
   webpack@5.98.0(@swc/core@1.11.13(@swc/helpers@0.5.15))(esbuild@0.25.1):
     dependencies:
       '@types/eslint-scope': 3.7.7
-      '@types/estree': 1.0.6
+      '@types/estree': 1.0.7
       '@webassemblyjs/ast': 1.14.1
       '@webassemblyjs/wasm-edit': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
