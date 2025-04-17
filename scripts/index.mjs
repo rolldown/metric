@@ -6,12 +6,16 @@ import { persistEntries } from "./utils.mjs";
 
 const __dirname = import.meta.dirname;
 const apps = fs.readdirSync(path.resolve(__dirname, "../packages"));
+const excludeApps = ["10000"]
 
 let recordMap = {};
 const dists = ["parcel-dist", "esbuild-dist", "rolldown-dist", "rspack-dist"];
 
 for (let i = 0; i < apps.length; i++) {
 	let app = apps[i];
+  if (excludeApps.includes(app)) {
+    continue;
+  }
 	let appRecord = {};
 	for (let dist of dists) {
 		let [bundlerName, _] = dist.split("-");
