@@ -5,11 +5,17 @@
   "main": "index.js",
   "scripts": {
     "build:vite": "vite build",
-    "build:rolldown": "rolldown build --config rolldown.config.mjs"
+    "build:rolldown": "rolldown build --config rolldown.config.mjs",
+    "build": "echo success"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+		"@iconify-icons/material-symbols": "^1.2.58",
+		"@iconify/react": "^5.0.1"
+  }
 }
