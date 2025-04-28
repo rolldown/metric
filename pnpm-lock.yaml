@@ -13,7 +13,7 @@ importers:
     devDependencies:
       '@rspack/cli':
         specifier: ^1.2.3
-        version: 1.3.7(@rspack/core@1.3.7(@swc/helpers@0.5.17))(@types/express@4.17.21)(webpack@5.99.7(@swc/core@1.11.22(@swc/helpers@0.5.17))(esbuild@0.25.3))
+        version: 1.3.8(@rspack/core@1.3.7(@swc/helpers@0.5.17))(@types/express@4.17.21)(webpack@5.99.7(@swc/core@1.11.22(@swc/helpers@0.5.17))(esbuild@0.25.3))
       envinfo:
         specifier: ^7.13.0
         version: 7.14.0
@@ -37,7 +37,7 @@ importers:
         version: 0.12.1(@swc/core@1.11.22(@swc/helpers@0.5.17))(rollup@4.40.1)
       vite:
         specifier: npm:rolldown-vite@latest
-        version: rolldown-vite@6.3.5(@types/node@22.15.2)(esbuild@0.25.3)(terser@5.39.0)
+        version: rolldown-vite@6.3.5(@types/node@22.15.3)(esbuild@0.25.3)(terser@5.39.0)
 
   packages/10000:
     dependencies:
@@ -1564,8 +1564,8 @@ packages:
   '@rspack/binding@1.3.7':
     resolution: {integrity: sha512-jSXLktIGmNNZssxT+fjZ31IyUO7lRoFrFO+XuqKlMpbnHE8yCrpaHE6rLyDPVO4Vnl6xx/df8usUXtZwIc4jrw==}
 
-  '@rspack/cli@1.3.7':
-    resolution: {integrity: sha512-P8hab4T1Z0WuBw4Wif5TGINJaTX/ddRizDpVFrTz348nT6ENUuJFjyT2on0evneShq3IVqwvvxRFky95KcKXGA==}
+  '@rspack/cli@1.3.8':
+    resolution: {integrity: sha512-1zp8LZJWBTqwsrjkKPKi7fDmFvwcdBM+t9gOzdyU/tsjSSP56pyReu0tI7hXdVbi4+/5cg9fePfiUWcJL02jiQ==}
     hasBin: true
     peerDependencies:
       '@rspack/core': ^1.0.0-alpha || ^1.x
@@ -1715,8 +1715,8 @@ packages:
   '@types/node-forge@1.3.11':
     resolution: {integrity: sha512-FQx220y22OKNTqaByeBGqHWYz4cl94tpcxeFdvBo3wjG6XPBuZ0BNgNZRV5J5TFmmcsJ4IzsLkmGRiQbnYsBEQ==}
 
-  '@types/node@22.15.2':
-    resolution: {integrity: sha512-uKXqKN9beGoMdBfcaTY1ecwz6ctxuJAcUlwE55938g0ZJ8lRxwAZqRz2AJ4pzpt5dHdTPMB863UZ0ESiFUcP7A==}
+  '@types/node@22.15.3':
+    resolution: {integrity: sha512-lX7HFZeHf4QG/J7tBZqrCAXwz9J5RD56Y6MpP0eJkka8p+K0RY/yBTW7CYFJ4VGCclxqOLKmiGP5juQc6MKgcw==}
 
   '@types/prop-types@15.7.14':
     resolution: {integrity: sha512-gNMvNH49DJ7OJYv+KAKn0Xp45p8PLl6zo2YnvDIbTd4J6MER2BmWN49TG7n9LvkyihINxeKW8+3bfS2yDC9dzQ==}
@@ -5697,7 +5697,7 @@ snapshots:
       '@rspack/binding-win32-ia32-msvc': 1.3.7
       '@rspack/binding-win32-x64-msvc': 1.3.7
 
-  '@rspack/cli@1.3.7(@rspack/core@1.3.7(@swc/helpers@0.5.17))(@types/express@4.17.21)(webpack@5.99.7(@swc/core@1.11.22(@swc/helpers@0.5.17))(esbuild@0.25.3))':
+  '@rspack/cli@1.3.8(@rspack/core@1.3.7(@swc/helpers@0.5.17))(@types/express@4.17.21)(webpack@5.99.7(@swc/core@1.11.22(@swc/helpers@0.5.17))(esbuild@0.25.3))':
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
       '@rspack/core': 1.3.7(@swc/helpers@0.5.17)
@@ -5813,20 +5813,20 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
 
   '@types/bonjour@3.5.13':
     dependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
 
   '@types/connect-history-api-fallback@1.5.4':
     dependencies:
       '@types/express-serve-static-core': 5.0.6
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
 
   '@types/eslint-scope@3.7.7':
     dependencies:
@@ -5842,14 +5842,14 @@ snapshots:
 
   '@types/express-serve-static-core@4.19.6':
     dependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
       '@types/qs': 6.9.18
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
 
   '@types/express-serve-static-core@5.0.6':
     dependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
       '@types/qs': 6.9.18
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -5865,7 +5865,7 @@ snapshots:
 
   '@types/http-proxy@1.17.16':
     dependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
 
   '@types/json-schema@7.0.15': {}
 
@@ -5873,9 +5873,9 @@ snapshots:
 
   '@types/node-forge@1.3.11':
     dependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
 
-  '@types/node@22.15.2':
+  '@types/node@22.15.3':
     dependencies:
       undici-types: 6.21.0
 
@@ -5899,7 +5899,7 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
 
   '@types/serve-index@1.9.4':
     dependencies:
@@ -5908,16 +5908,16 @@ snapshots:
   '@types/serve-static@1.15.7':
     dependencies:
       '@types/http-errors': 2.0.4
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
       '@types/send': 0.17.4
 
   '@types/sockjs@0.3.36':
     dependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
 
   '@valibot/to-json-schema@1.0.0(valibot@1.0.0)':
     dependencies:
@@ -6689,7 +6689,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -7098,7 +7098,7 @@ snapshots:
 
   retry@0.13.1: {}
 
-  rolldown-vite@6.3.5(@types/node@22.15.2)(esbuild@0.25.3)(terser@5.39.0):
+  rolldown-vite@6.3.5(@types/node@22.15.3)(esbuild@0.25.3)(terser@5.39.0):
     dependencies:
       '@oxc-project/runtime': 0.66.0
       fdir: 6.4.4(picomatch@4.0.2)
@@ -7108,7 +7108,7 @@ snapshots:
       rolldown: 1.0.0-beta.8-commit.2686eb1(@oxc-project/runtime@0.66.0)
       tinyglobby: 0.2.13
     optionalDependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
       esbuild: 0.25.3
       fsevents: 2.3.3
       terser: 5.39.0
