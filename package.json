@@ -13,7 +13,7 @@
 	"scripts": {
 		"build": "pnpm run -r build"
 	},
-	"packageManager": "pnpm@10.9.0",
+	"packageManager": "pnpm@10.10.0",
   "pnpm": {
     "overrides": {
       "vite": "npm:rolldown-vite@latest"
