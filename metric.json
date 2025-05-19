@@ -4800,3 +4800,5 @@
 {"case":"rolldown self","metric":"release binary size","timestamp":1747545198360,"commit":"d89470c050333df5e4398036cbf89243bdc1ba4a","unit":"byte","records":{"rolldown":"16699160"},"repoUrl":"https://github.com/rolldown/rolldown"}
 {"case":"rolldown self","metric":"release compile time","timestamp":1747590950356,"commit":"360c07290675366ee5a812485963a8412e40b66e","unit":"s","records":{"rolldown":"315.85"},"repoUrl":"https://github.com/rolldown/rolldown"}
 {"case":"rolldown self","metric":"release binary size","timestamp":1747590950356,"commit":"360c07290675366ee5a812485963a8412e40b66e","unit":"byte","records":{"rolldown":"16699160"},"repoUrl":"https://github.com/rolldown/rolldown"}
+{"case":"lodash-es-basic","metric":"production build size","timestamp":1747620298669,"commit":"","unit":"byte","records":{"parcel":15443,"esbuild":17294,"rolldown":14523,"rspack":14944}}
+{"case":"react-fluent-hydration","metric":"production build size","timestamp":1747620298669,"commit":"","unit":"byte","records":{"parcel":255624,"esbuild":284309,"rolldown":252336,"rspack":250911}}
