@@ -5,7 +5,8 @@ export default defineConfig({
   experimental: {
     enableNativePlugin: isDev ? 'resolver' : true
   },
+  base: '/metric',
   build: {
-    outDir: "docs"
+    outDir: "docs",
   }
 })
