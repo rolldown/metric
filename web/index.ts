@@ -51,7 +51,6 @@ async function main() {
 		series,
 		{ unit, data, commit, timestamp, metric, repoUrl },
 	] of Object.entries(normalizedEntryDict)) {
-    console.log(`data: `, data)
 		let plotName = series;
 		let seriesName: string;
 		seriesName = series;
@@ -86,7 +85,6 @@ async function main() {
 		}
 
 		Object.entries(data).forEach(([key, value]) => {
-      console.log(`key: `, key,  commit)
 			plot?.data.push({
 				name: key,
 				line: {
