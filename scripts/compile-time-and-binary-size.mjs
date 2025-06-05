@@ -1,7 +1,6 @@
 import { persistEntries } from "./utils.mjs";
 import * as path from 'node:path'
 import { fileURLToPath } from "node:url";
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 const compileTime = process.env.COMPILE_TIME;
 const commit = process.env.COMMIT_HASH || "";
@@ -32,4 +31,4 @@ const binarySizeEntry = {
   repoUrl: repoUrl ? `https://github.com/${repoUrl}` : ""
 };
 
-persistEntries([compileTimeEntry, binarySizeEntry], path.resolve(__dirname, "../metric.json"));
+persistEntries([compileTimeEntry, binarySizeEntry], path.resolve(import.meta.dirname, "../metric.json"));
