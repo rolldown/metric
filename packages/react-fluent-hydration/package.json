@@ -1,4 +1,5 @@
 {
+  "name": "@metric/react-fluent-hydration",
   "scripts": {
     "build:rspack": "rspack build",
     "build:esbuild": "esbuild src/index.jsx --bundle --minify --outfile=esbuild-dist/index.js",

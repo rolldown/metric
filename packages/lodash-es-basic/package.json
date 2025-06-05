@@ -1,4 +1,5 @@
 {
+  "name": "@metric/lodash-es-basic",
   "scripts": {
     "build:rspack": "rspack build",
     "build:esbuild": "esbuild src/index.js --bundle --minify --outfile=esbuild-dist/index.js",

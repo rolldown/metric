@@ -1,0 +1,19 @@
+{
+  "name": "metrics-web",
+  "description": "Stores performance metrics for rolldown.",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^20.14.8",
+    "@types/plotly.js": "^1.54.22"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  }
+}
