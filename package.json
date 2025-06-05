@@ -11,7 +11,8 @@
 		"rollup-plugin-swc3": "^0.12.1"
 	},
 	"scripts": {
-		"build": "pnpm run --filter '@metric/*' build"
+		"build": "pnpm run --filter '@metric/*' build",
+    "build:web": "pnpm run --filter 'metric-web' build"
 	},
 	"pnpm": {
 		"overrides": {
