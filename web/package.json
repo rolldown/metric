@@ -13,7 +13,7 @@
   },
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && node ./scripts/move-doc-to-root.mjs",
     "dev": "vite"
   }
 }
