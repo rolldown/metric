@@ -5,6 +5,7 @@
     "build:esbuild": "esbuild src/index.jsx --bundle --minify --outfile=esbuild-dist/index.js",
     "build:parcel": "parcel build src/index.jsx --dist-dir parcel-dist --no-source-maps --no-cache",
     "build:rolldown": "rolldown --config ./rolldown.config.mjs",
+    "build:vite": "vite build",
     "build": "pnpm run /build:.*/"
   },
   "dependencies": {

@@ -1,16 +1,15 @@
-import { defineConfig } from "rolldown";
+import { defineConfig } from "vite";
 import { minify } from "rollup-plugin-swc3";
 
 export default defineConfig({
-  input: "./src/index.js",
-  output: {
-    dir: "rolldown-dist",
+  build: {
+    outDir: "vite-dist",
+    rollupOptions: {
+      output: {
+        minify: false,
+      },
+    },
   },
-  define: {
-    "process.env.NODE_ENV": JSON.stringify("production"),
-  },
-  profilerNames: false,
-  minify: false,
   plugins: [
     minify({
       module: true,
@@ -19,6 +18,9 @@ export default defineConfig({
         toplevel: true,
       },
       compress: {},
-    })
+    }),
   ],
+  experimental: {
+    enableNativePlugin: true
+  }
 });

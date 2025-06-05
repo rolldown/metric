@@ -9,7 +9,7 @@ const apps = fs.readdirSync(path.resolve(__dirname, "../packages"));
 const excludeApps = ["10000"]
 
 let recordMap = {};
-const dists = ["parcel-dist", "esbuild-dist", "rolldown-dist", "rspack-dist"];
+const dists = ["parcel-dist", "esbuild-dist", "rolldown-dist", "rspack-dist", "vite-dist"];
 
 for (let i = 0; i < apps.length; i++) {
 	let app = apps[i];
@@ -20,7 +20,7 @@ for (let i = 0; i < apps.length; i++) {
 	for (let dist of dists) {
 		let [bundlerName, _] = dist.split("-");
 		let totalSize = 0;
-		const jsfiles = await glob(`packages/${app}/${dist}/**/*.js`, {
+		const jsfiles = await glob(`packages/${app}/${dist}/**/*.{js,mjs}`, {
 			ignore: "**/node_modules/**",
 		});
 		for (let f of jsfiles) {
