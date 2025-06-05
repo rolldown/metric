@@ -51,6 +51,7 @@ async function main() {
 		series,
 		{ unit, data, commit, timestamp, metric, repoUrl },
 	] of Object.entries(normalizedEntryDict)) {
+    console.log(`data: `, data)
 		let plotName = series;
 		let seriesName: string;
 		seriesName = series;
@@ -85,6 +86,7 @@ async function main() {
 		}
 
 		Object.entries(data).forEach(([key, value]) => {
+      console.log(`key: `, key,  commit)
 			plot?.data.push({
 				name: key,
 				line: {
@@ -93,7 +95,15 @@ async function main() {
 				},
 				x: timestamp.map((n) => new Date(n)),
 				y: value,
-				hovertext: commit,
+				hovertext: commit.map(item => {
+          if (typeof item === "string") {
+            return item;
+          } else if (typeof item === "object") {
+            return item[key]
+          } else {
+            return ''
+          }
+        }),
 				hovertemplate: `%{y} ${unit}<br>(%{hovertext})`,
 				repoUrl: repoUrl
 			});
@@ -169,13 +179,13 @@ function normalizeEntryDict(
 		let data: Record<string, number[]> = {};
 		let commit: string[] = [];
 		let timestamp: number[] = [];
-    let totalSet = new Set<string>();
+    let recordKeySet = new Set<string>();
     value.forEach(v => {
       Object.keys(v.records).forEach(key => {
-        totalSet.add(key);
+        recordKeySet.add(key);
       })
     })
-    for (let key of totalSet) {
+    for (let key of recordKeySet) {
       data[key] = [];
     }
 		for (let i = 0; i < value.length; i++) {
@@ -183,7 +193,7 @@ function normalizeEntryDict(
 			Object.entries(v.records).forEach(([key, value]) => {
         data[key].push(value);
 			});
-      for (let key of totalSet) {
+      for (let key of recordKeySet) {
         if (!v.records[key]) {
           data[key].push(undefined!);
         }
@@ -192,6 +202,7 @@ function normalizeEntryDict(
 			timestamp.push(v.timestamp);
 		}
 		metricSet.add(value[value.length - 1].metric);
+
 		map[key] = {
 			data,
 			commit,
