@@ -37,7 +37,7 @@ importers:
         version: 0.12.1(@swc/core@1.11.31(@swc/helpers@0.5.17))(rollup@4.42.0)
       vite:
         specifier: npm:rolldown-vite@latest
-        version: rolldown-vite@6.3.18(@types/node@24.0.0)(esbuild@0.25.5)(terser@5.42.0)
+        version: rolldown-vite@6.3.18(@types/node@24.0.1)(esbuild@0.25.5)(terser@5.42.0)
 
   packages/10000:
     dependencies:
@@ -1792,8 +1792,8 @@ packages:
   '@types/node@22.15.30':
     resolution: {integrity: sha512-6Q7lr06bEHdlfplU6YRbgG1SFBdlsfNC4/lX+SkhiTs0cpJkOElmWls8PxDFv4yY/xKb8Y6SO0OmSX4wgqTZbA==}
 
-  '@types/node@24.0.0':
-    resolution: {integrity: sha512-yZQa2zm87aRVcqDyH5+4Hv9KYgSdgwX1rFnGvpbzMaC7YAljmhBET93TPiTd3ObwTL+gSpIzPKg5BqVxdCvxKg==}
+  '@types/node@24.0.1':
+    resolution: {integrity: sha512-MX4Zioh39chHlDJbKmEgydJDS3tspMP/lnQC67G3SWsTnb9NeYVWOjkxpOSy4oMfPs4StcWHwBrvUb4ybfnuaw==}
 
   '@types/prop-types@15.7.15':
     resolution: {integrity: sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==}
@@ -5774,7 +5774,7 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@24.0.0':
+  '@types/node@24.0.1':
     dependencies:
       undici-types: 7.8.0
 
@@ -6493,7 +6493,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 24.0.0
+      '@types/node': 24.0.1
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -6857,7 +6857,7 @@ snapshots:
 
   retry@0.13.1: {}
 
-  rolldown-vite@6.3.18(@types/node@24.0.0)(esbuild@0.25.5)(terser@5.42.0):
+  rolldown-vite@6.3.18(@types/node@24.0.1)(esbuild@0.25.5)(terser@5.42.0):
     dependencies:
       '@oxc-project/runtime': 0.72.2
       fdir: 6.4.5(picomatch@4.0.2)
@@ -6867,7 +6867,7 @@ snapshots:
       rolldown: 1.0.0-beta.11-commit.0a985f3
       tinyglobby: 0.2.14
     optionalDependencies:
-      '@types/node': 24.0.0
+      '@types/node': 24.0.1
       esbuild: 0.25.5
       fsevents: 2.3.3
       terser: 5.42.0
