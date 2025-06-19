@@ -37,7 +37,7 @@ importers:
         version: 0.12.1(@swc/core@1.11.31(@swc/helpers@0.5.17))(rollup@4.42.0)
       vite:
         specifier: npm:rolldown-vite@latest
-        version: rolldown-vite@6.3.21(@types/node@24.0.3)(esbuild@0.25.5)(terser@5.42.0)
+        version: rolldown-vite@6.3.21(@types/node@24.0.3)(esbuild@0.25.5)(terser@5.43.0)
 
   packages/10000:
     dependencies:
@@ -3165,8 +3165,8 @@ packages:
       uglify-js:
         optional: true
 
-  terser@5.42.0:
-    resolution: {integrity: sha512-UYCvU9YQW2f/Vwl+P0GfhxJxbUGLwd+5QrrGgLajzWAtC/23AX0vcise32kkP7Eu0Wu9VlzzHAXkLObgjQfFlQ==}
+  terser@5.43.0:
+    resolution: {integrity: sha512-CqNNxKSGKSZCunSvwKLTs8u8sGGlp27sxNZ4quGh0QeNuyHM0JSEM/clM9Mf4zUp6J+tO2gUXhgXT2YMMkwfKQ==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -6892,7 +6892,7 @@ snapshots:
 
   retry@0.13.1: {}
 
-  rolldown-vite@6.3.21(@types/node@24.0.3)(esbuild@0.25.5)(terser@5.42.0):
+  rolldown-vite@6.3.21(@types/node@24.0.3)(esbuild@0.25.5)(terser@5.43.0):
     dependencies:
       '@oxc-project/runtime': 0.73.0
       fdir: 6.4.5(picomatch@4.0.2)
@@ -6905,7 +6905,7 @@ snapshots:
       '@types/node': 24.0.3
       esbuild: 0.25.5
       fsevents: 2.3.3
-      terser: 5.42.0
+      terser: 5.43.0
 
   rolldown@1.0.0-beta.13-commit.024b632:
     dependencies:
@@ -7212,13 +7212,13 @@ snapshots:
       jest-worker: 27.5.1
       schema-utils: 4.3.2
       serialize-javascript: 6.0.2
-      terser: 5.42.0
+      terser: 5.43.0
       webpack: 5.99.9(@swc/core@1.11.31(@swc/helpers@0.5.17))(esbuild@0.25.5)
     optionalDependencies:
       '@swc/core': 1.11.31(@swc/helpers@0.5.17)
       esbuild: 0.25.5
 
-  terser@5.42.0:
+  terser@5.43.0:
     dependencies:
       '@jridgewell/source-map': 0.3.6
       acorn: 8.15.0
