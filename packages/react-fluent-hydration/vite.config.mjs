@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { minify } from "rollup-plugin-swc3";
+import { viteMinify } from "rollup-plugin-swc3";
 
 export default defineConfig({
   build: {
@@ -8,10 +8,15 @@ export default defineConfig({
       output: {
         minify: false,
       },
+      treeshake: {
+        commonjs: true
+      },
+      profilerNames: false
     },
   },
+
   plugins: [
-    minify({
+    viteMinify({
       module: true,
       // swc's minify option here
       mangle: {

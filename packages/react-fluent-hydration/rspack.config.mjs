@@ -18,6 +18,11 @@ export default defineConfig({
                 syntax: "ecmascript",
                 jsx: true,
               },
+              transform: {
+                react: {
+                  runtime: "automatic",
+                },
+              }
             },
           },
         },

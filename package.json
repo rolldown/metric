@@ -1,10 +1,10 @@
 {
 	"devDependencies": {
-		"@rspack/cli": "^1.2.3",
+		"@rspack/cli": "latest",
 		"envinfo": "^7.13.0",
-		"esbuild": "^0.25.0",
+		"esbuild": "latest",
 		"glob": "^11.0.0",
-		"parcel": "^2.12.0",
+		"parcel": "latest",
 		"process": "^0.11.10",
 		"rolldown": "latest",
 		"vite": "latest",

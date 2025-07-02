@@ -12,19 +12,19 @@ importers:
   .:
     devDependencies:
       '@rspack/cli':
-        specifier: ^1.2.3
+        specifier: latest
         version: 1.4.2(@rspack/core@1.4.1(@swc/helpers@0.5.17))(@types/express@4.17.23)(webpack@5.99.9(@swc/core@1.12.7(@swc/helpers@0.5.17))(esbuild@0.25.5))
       envinfo:
         specifier: ^7.13.0
         version: 7.14.0
       esbuild:
-        specifier: ^0.25.0
+        specifier: latest
         version: 0.25.5
       glob:
         specifier: ^11.0.0
         version: 11.0.3
       parcel:
-        specifier: ^2.12.0
+        specifier: latest
         version: 2.15.4(@swc/helpers@0.5.17)
       process:
         specifier: ^0.11.10
@@ -5810,6 +5810,7 @@ snapshots:
   '@types/node@24.0.10':
     dependencies:
       undici-types: 7.8.0
+    optional: true
 
   '@types/prop-types@15.7.15': {}
 
@@ -6520,7 +6521,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 24.0.10
+      '@types/node': 22.15.34
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -7251,7 +7252,8 @@ snapshots:
 
   undici-types@6.21.0: {}
 
-  undici-types@7.8.0: {}
+  undici-types@7.8.0:
+    optional: true
 
   unpipe@1.0.0: {}
 
