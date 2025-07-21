@@ -5930,3 +5930,5 @@
 {"case":"rolldown self","metric":"release binary size","timestamp":1753091264876,"commit":"eb227b8b266358474b271cb5de3e91c612d10aad","unit":"byte","records":{"rolldown":"17977120"},"repoUrl":"https://github.com/rolldown/rolldown"}
 {"case":"rolldown self","metric":"release compile time","timestamp":1753092230678,"commit":"dc77bc691ddbcec6c7207103da3d37d2676b1593","unit":"s","records":{"rolldown":"332.01"},"repoUrl":"https://github.com/rolldown/rolldown"}
 {"case":"rolldown self","metric":"release binary size","timestamp":1753092230678,"commit":"dc77bc691ddbcec6c7207103da3d37d2676b1593","unit":"byte","records":{"rolldown":"17977120"},"repoUrl":"https://github.com/rolldown/rolldown"}
+{"case":"rolldown self","metric":"release compile time","timestamp":1753098889315,"commit":"33c0b2d6d0e755a62d1d80d2b9bd1e1668e2a65c","unit":"s","records":{"rolldown":"341.19"},"repoUrl":"https://github.com/rolldown/rolldown"}
+{"case":"rolldown self","metric":"release binary size","timestamp":1753098889315,"commit":"33c0b2d6d0e755a62d1d80d2b9bd1e1668e2a65c","unit":"byte","records":{"rolldown":"17981216"},"repoUrl":"https://github.com/rolldown/rolldown"}
