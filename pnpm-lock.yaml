@@ -17,7 +17,7 @@ importers:
         version: 1.5.7(@rspack/core@1.5.5(@swc/helpers@0.5.17))(@types/express@4.17.23)(webpack@5.101.3(@swc/core@1.13.20(@swc/helpers@0.5.17))(esbuild@0.25.10))
       envinfo:
         specifier: ^7.13.0
-        version: 7.14.0
+        version: 7.15.0
       esbuild:
         specifier: latest
         version: 0.25.10
@@ -2196,8 +2196,8 @@ packages:
     resolution: {integrity: sha512-d4lC8xfavMeBjzGr2vECC3fsGXziXZQyJxD868h2M/mBI3PwAuODxAkLkq5HYuvrPYcUtiLzsTo8U3PgX3Ocww==}
     engines: {node: '>=10.13.0'}
 
-  envinfo@7.14.0:
-    resolution: {integrity: sha512-CO40UI41xDQzhLB1hWyqUKgFhs250pNcGbyGKe1l/e4FSaI/+YE4IMG76GDt0In67WLPACIITC+sOi08x4wIvg==}
+  envinfo@7.15.0:
+    resolution: {integrity: sha512-chR+t7exF6y59kelhXw5I3849nTy7KIRO+ePdLMhCD+JRP/JvmkenDWP7QSFGlsHX+kxGxdDutOPrmj5j1HR6g==}
     engines: {node: '>=4'}
     hasBin: true
 
@@ -6194,7 +6194,7 @@ snapshots:
       graceful-fs: 4.2.11
       tapable: 2.2.3
 
-  envinfo@7.14.0: {}
+  envinfo@7.15.0: {}
 
   es-define-property@1.0.1: {}
 
