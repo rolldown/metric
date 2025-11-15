@@ -6,6 +6,9 @@ export default defineConfig({
   input: path.resolve(import.meta.dirname, "./src/index.jsx"),
   output: {
     dir: "rolldown-dist",
+    generatedCode: {
+      profilerNames: false,
+    },
   },
   transform: {
     define: {
@@ -15,7 +18,6 @@ export default defineConfig({
   treeshake: {
     commonjs: true,
   },
-  profilerNames: false,
   plugins: [
     minify({
       module: true,
