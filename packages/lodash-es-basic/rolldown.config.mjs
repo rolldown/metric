@@ -6,8 +6,10 @@ export default defineConfig({
   output: {
     dir: "rolldown-dist",
   },
-  define: {
-    "process.env.NODE_ENV": JSON.stringify("production"),
+  transform: {
+    define: {
+      "process.env.NODE_ENV": JSON.stringify("production"),
+    },
   },
   profilerNames: false,
   minify: false,
@@ -19,6 +21,6 @@ export default defineConfig({
         toplevel: true,
       },
       compress: {},
-    })
+    }),
   ],
 });

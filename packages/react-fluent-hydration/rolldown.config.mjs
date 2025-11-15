@@ -7,11 +7,13 @@ export default defineConfig({
   output: {
     dir: "rolldown-dist",
   },
-  define: {
-    "process.env.NODE_ENV": JSON.stringify("production"),
+  transform: {
+    define: {
+      "process.env.NODE_ENV": JSON.stringify("production"),
+    },
   },
   treeshake: {
-    commonjs: true
+    commonjs: true,
   },
   profilerNames: false,
   plugins: [
