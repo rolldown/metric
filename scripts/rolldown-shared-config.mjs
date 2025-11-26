@@ -12,7 +12,7 @@ import { minify } from "rollup-plugin-swc3";
  * 1. oxc: output.minify: true (oxc minifier) → rolldown-oxc-dist
  * 2. swc: swc plugin (swc minifier) → rolldown-swc-dist
  * 3. strictExecutionOrder: strictExecutionOrder: true + output.minify: true (oxc minifier) → rolldown-strictExecutionOrder-dist
- * 4. onDemandWrapping: strictExecutionOrder: true + onDemandWrapping: true + output.minify: true (oxc minifier) → rolldown-ondemandWrapping-dist
+ * 4. onDemandWrapping: strictExecutionOrder: true + onDemandWrapping: true + output.minify: true (oxc minifier) → rolldown-onDemandWrapping-dist
  */
 export function getSharedRolldownConfig() {
   const minifier = process.env.ROLLDOWN_MINIFIER;
@@ -26,7 +26,7 @@ export function getSharedRolldownConfig() {
   // Determine output directory based on variant
   let outputDir;
   if (strictExecutionOrder && onDemandWrapping) {
-    outputDir = 'rolldown-ondemandWrapping-dist';
+    outputDir = 'rolldown-onDemandWrapping-dist';
   } else if (strictExecutionOrder) {
     outputDir = 'rolldown-strictExecutionOrder-dist';
   } else if (minifier === 'swc') {
