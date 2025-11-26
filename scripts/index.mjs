@@ -14,7 +14,7 @@ const excludeApps = ["10000"];
 // 1. oxc minifier only
 // 2. swc minifier (plugin)
 // 3. strictExecutionOrder + oxc minifier
-// 4. strictExecutionOrder + ondemandWrapping + oxc minifier
+// 4. strictExecutionOrder + onDemandWrapping + oxc minifier
 const rolldownConfigs = [
   {
     name: "rolldown-oxc-minify",
