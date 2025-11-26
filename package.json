@@ -1,14 +1,15 @@
 {
 	"devDependencies": {
 		"@rspack/cli": "latest",
+		"@swc/core": "latest",
 		"envinfo": "^7.13.0",
 		"esbuild": "latest",
 		"glob": "^13.0.0",
 		"parcel": "latest",
 		"process": "^0.11.10",
 		"rolldown": "latest",
-		"vite": "latest",
-		"rollup-plugin-swc3": "^0.12.1"
+		"rollup-plugin-swc3": "^0.12.1",
+		"vite": "latest"
 	},
 	"scripts": {
 		"build": "pnpm run --filter '@metric/*' build",
@@ -18,7 +19,14 @@
 		"overrides": {
 			"vite": "npm:rolldown-vite@latest",
 			"rolldown": "latest"
-		}
+		},
+		"onlyBuiltDependencies": [
+			"@parcel/watcher",
+			"@swc/core",
+			"esbuild",
+			"lmdb",
+			"msgpackr-extract"
+		]
 	},
 	"packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b"
 }
