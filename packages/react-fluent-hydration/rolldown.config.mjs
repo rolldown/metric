@@ -5,13 +5,13 @@ import { getSharedRolldownConfig } from "../../scripts/rolldown-shared-config.mj
 const sharedConfig = getSharedRolldownConfig();
 
 export default defineConfig({
+  ...sharedConfig,
   input: path.resolve(import.meta.dirname, "./src/index.jsx"),
   output: {
-    dir: sharedConfig.outputDir,
+    ...sharedConfig.output,
     generatedCode: {
       profilerNames: false,
     },
-    ...sharedConfig.output,
   },
   transform: {
     define: {
@@ -21,6 +21,4 @@ export default defineConfig({
   treeshake: {
     commonjs: true,
   },
-  plugins: sharedConfig.plugins,
-  experimental: sharedConfig.experimental,
 });

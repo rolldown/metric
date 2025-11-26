@@ -4,17 +4,12 @@ import { getSharedRolldownConfig } from "../../scripts/rolldown-shared-config.mj
 const sharedConfig = getSharedRolldownConfig();
 
 export default defineConfig({
+  ...sharedConfig,
   input: "./src/index.js",
-  output: {
-    dir: sharedConfig.outputDir,
-    ...sharedConfig.output,
-  },
   transform: {
     define: {
       "process.env.NODE_ENV": JSON.stringify("production"),
     },
   },
   profilerNames: false,
-  plugins: sharedConfig.plugins,
-  experimental: sharedConfig.experimental,
 });
