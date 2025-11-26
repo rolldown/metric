@@ -25,6 +25,19 @@ export function getVersionMap() {
       name = "swc"; // normalize swc name
     }
     pre[name] = info.version;
+
+    // set rolldown variants
+    if (name === "rolldown") {
+      pre["rolldown-strictExecutionOrder"] = info.version;
+      pre["rolldown-onDemandWrapping"] = info.version;
+
+      pre["rolldown-swc"] ??= "";
+      pre["rolldown-swc"] = info.version + pre["rolldown-swc"];
+    } else if (name === "swc") {
+      pre["rolldown-swc"] ??= "";
+      pre["rolldown-swc"] += ` (swc: ${info.version})`;
+    }
+
     return pre;
   }, {});
   return versionMap;
