@@ -9,7 +9,7 @@ export function persistEntries(entries, filename) {
 
 export function getVersionMap() {
   const res = execSync(
-    "pnpm list 'rolldown' 'rolldown-vite' 'esbuild' '@rspack/cli' 'parcel' --json",
+    "pnpm list 'rolldown' 'rolldown-vite' 'esbuild' '@rspack/cli' 'parcel' '@swc/core' --json",
     {},
   );
 
@@ -21,6 +21,8 @@ export function getVersionMap() {
     let [name, info] = cur;
     if (name === "@rspack/cli") {
       name = "rspack"; // normalize rspack name
+    } else if (name === "@swc/core") {
+      name = "swc"; // normalize swc name
     }
     pre[name] = info.version;
     return pre;

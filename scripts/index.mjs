@@ -14,7 +14,7 @@ let gzipRecordMap = {};
 const dists = [
   "parcel-dist",
   "esbuild-dist",
-  "rolldown-oxc-dist",
+  "rolldown-dist",
   "rolldown-swc-dist",
   "rolldown-strictExecutionOrder-dist",
   "rolldown-onDemandWrapping-dist",

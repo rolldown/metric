@@ -9,7 +9,7 @@ import { minify } from "rollup-plugin-swc3";
  * - ROLLDOWN_ONDEMAND_WRAPPING: 'true' - Enable on-demand wrapping
  * 
  * Build variants:
- * 1. oxc: output.minify: true (oxc minifier) → rolldown-oxc-dist
+ * 1. oxc: output.minify: true (oxc minifier) → rolldown-dist
  * 2. swc: swc plugin (swc minifier) → rolldown-swc-dist
  * 3. strictExecutionOrder: strictExecutionOrder: true + output.minify: true (oxc minifier) → rolldown-strictExecutionOrder-dist
  * 4. onDemandWrapping: strictExecutionOrder: true + onDemandWrapping: true + output.minify: true (oxc minifier) → rolldown-onDemandWrapping-dist
@@ -32,7 +32,7 @@ export function getSharedRolldownConfig() {
   } else if (minifier === 'swc') {
     outputDir = 'rolldown-swc-dist';
   } else {
-    outputDir = 'rolldown-oxc-dist';
+    outputDir = 'rolldown-dist';
   }
 
   const config = {

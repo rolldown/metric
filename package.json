@@ -1,6 +1,7 @@
 {
 	"devDependencies": {
 		"@rspack/cli": "latest",
+		"@swc/core": "latest",
 		"envinfo": "^7.13.0",
 		"esbuild": "latest",
 		"glob": "^13.0.0",
