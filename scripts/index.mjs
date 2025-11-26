@@ -12,7 +12,10 @@ let recordMap = {};
 const dists = [
   "parcel-dist",
   "esbuild-dist",
-  "rolldown-dist",
+  "rolldown-oxc-dist",
+  "rolldown-swc-dist",
+  "rolldown-strictExecutionOrder-dist",
+  "rolldown-ondemandWrapping-dist",
   "rspack-dist",
   "vite-dist",
 ];
@@ -24,7 +27,9 @@ for (let i = 0; i < apps.length; i++) {
   }
   let appRecord = {};
   for (let dist of dists) {
-    let [bundlerName, _] = dist.split("-");
+    let [bundlerName, ...rest] = dist.split("-");
+    // Handle multi-part names like rolldown-oxc-dist -> rolldown-oxc
+    let name = rest.length > 1 ? `${bundlerName}-${rest.slice(0, -1).join("-")}` : bundlerName;
     let totalSize = 0;
     const jsfiles = await glob(`packages/${app}/${dist}/**/*.{js,mjs}`, {
       ignore: "**/node_modules/**",
@@ -32,7 +37,7 @@ for (let i = 0; i < apps.length; i++) {
     for (let f of jsfiles) {
       totalSize += fs.statSync(f).size;
     }
-    appRecord[bundlerName] = totalSize;
+    appRecord[name] = totalSize;
   }
   recordMap[app] = appRecord;
 }

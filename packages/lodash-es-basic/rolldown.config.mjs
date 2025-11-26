@@ -1,10 +1,13 @@
 import { defineConfig } from "rolldown";
-import { minify } from "rollup-plugin-swc3";
+import { getSharedRolldownConfig } from "../../scripts/rolldown-shared-config.mjs";
+
+const sharedConfig = getSharedRolldownConfig();
 
 export default defineConfig({
   input: "./src/index.js",
   output: {
-    dir: "rolldown-dist",
+    dir: sharedConfig.outputDir,
+    ...sharedConfig.output,
   },
   transform: {
     define: {
@@ -12,15 +15,6 @@ export default defineConfig({
     },
   },
   profilerNames: false,
-  minify: false,
-  plugins: [
-    minify({
-      module: true,
-      // swc's minify option here
-      mangle: {
-        toplevel: true,
-      },
-      compress: {},
-    }),
-  ],
+  plugins: sharedConfig.plugins,
+  experimental: sharedConfig.experimental,
 });

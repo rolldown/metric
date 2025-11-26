@@ -4,7 +4,10 @@
     "build:rspack": "rspack build",
     "build:esbuild": "esbuild src/index.js --bundle --minify --outfile=esbuild-dist/index.js",
     "build:parcel": "parcel build src/index.js --dist-dir parcel-dist --no-source-maps --no-cache",
-    "build:rolldown": "rolldown --config ./rolldown.config.mjs",
+    "build:rolldown:oxc": "ROLLDOWN_MINIFIER=oxc rolldown --config ./rolldown.config.mjs",
+    "build:rolldown:swc": "ROLLDOWN_MINIFIER=swc rolldown --config ./rolldown.config.mjs",
+    "build:rolldown:strictExecutionOrder": "ROLLDOWN_MINIFIER=oxc ROLLDOWN_STRICT_EXECUTION_ORDER=true rolldown --config ./rolldown.config.mjs",
+    "build:rolldown:ondemandWrapping": "ROLLDOWN_MINIFIER=oxc ROLLDOWN_STRICT_EXECUTION_ORDER=true ROLLDOWN_ONDEMAND_WRAPPING=true rolldown --config ./rolldown.config.mjs",
     "build:vite": "vite build",
     "build": "pnpm run /build:.*/"
   },

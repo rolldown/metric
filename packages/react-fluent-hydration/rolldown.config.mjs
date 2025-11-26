@@ -1,14 +1,17 @@
 import { defineConfig } from "rolldown";
-import { minify } from "rollup-plugin-swc3";
 import * as path from "path";
+import { getSharedRolldownConfig } from "../../scripts/rolldown-shared-config.mjs";
+
+const sharedConfig = getSharedRolldownConfig();
 
 export default defineConfig({
   input: path.resolve(import.meta.dirname, "./src/index.jsx"),
   output: {
-    dir: "rolldown-dist",
+    dir: sharedConfig.outputDir,
     generatedCode: {
       profilerNames: false,
     },
+    ...sharedConfig.output,
   },
   transform: {
     define: {
@@ -18,14 +21,6 @@ export default defineConfig({
   treeshake: {
     commonjs: true,
   },
-  plugins: [
-    minify({
-      module: true,
-      // swc's minify option here
-      mangle: {
-        toplevel: true,
-      },
-      compress: {},
-    }),
-  ],
+  plugins: sharedConfig.plugins,
+  experimental: sharedConfig.experimental,
 });
