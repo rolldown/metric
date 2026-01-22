@@ -41,7 +41,7 @@ importers:
         version: 0.12.1(@swc/core@1.15.10(@swc/helpers@0.5.18))(rollup@4.55.1)
       vite:
         specifier: npm:rolldown-vite@latest
-        version: rolldown-vite@7.3.1(@types/node@25.0.9)(esbuild@0.27.2)(terser@5.46.0)
+        version: rolldown-vite@7.3.1(@types/node@25.0.10)(esbuild@0.27.2)(terser@5.46.0)
 
   packages/10000:
     dependencies:
@@ -62,7 +62,7 @@ importers:
     dependencies:
       lodash-es:
         specifier: ^4.17.21
-        version: 4.17.22
+        version: 4.17.23
 
   packages/react-fluent-hydration:
     dependencies:
@@ -87,7 +87,7 @@ importers:
     dependencies:
       lodash-es:
         specifier: ^4.17.21
-        version: 4.17.22
+        version: 4.17.23
     devDependencies:
       '@types/lodash-es':
         specifier: ^4.17.12
@@ -1802,8 +1802,8 @@ packages:
   '@types/node@24.10.9':
     resolution: {integrity: sha512-ne4A0IpG3+2ETuREInjPNhUGis1SFjv1d5asp8MzEAGtOZeTeHVDOYqOgqfhvseqg/iXty2hjBf1zAOb7RNiNw==}
 
-  '@types/node@25.0.9':
-    resolution: {integrity: sha512-/rpCXHlCWeqClNBwUhDcusJxXYDjZTyE8v5oTO7WbL8eij2nKhUeU89/6xgjU7N4/Vh3He0BtyhJdQbDyhiXAw==}
+  '@types/node@25.0.10':
+    resolution: {integrity: sha512-zWW5KPngR/yvakJgGOmZ5vTBemDoSqF3AcV/LrO5u5wTWyEAVVh+IT39G4gtyAkh3CtTZs8aX/yRM82OfzHJRg==}
 
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
@@ -2549,8 +2549,8 @@ packages:
     resolution: {integrity: sha512-IWqP2SCPhyVFTBtRcgMHdzlf9ul25NwaFx4wCEH/KjAXuuHY4yNjvPXsBokp8jCB936PyWRaPKUNh8NvylLp2Q==}
     engines: {node: '>=6.11.5'}
 
-  lodash-es@4.17.22:
-    resolution: {integrity: sha512-XEawp1t0gxSi9x01glktRZ5HDy0HXqrM0x5pXQM98EaI0NxO6jVM7omDOxsuEo5UIASAnm2bRp1Jt/e0a2XU8Q==}
+  lodash-es@4.17.23:
+    resolution: {integrity: sha512-kVI48u3PZr38HdYz98UmfPnXl2DXrpdctLrFLCd3kOx1xUkOmpFPx7gCWWM5MPkL/fD8zb+Ph0QzjGFs4+hHWg==}
 
   lru-cache@11.2.4:
     resolution: {integrity: sha512-B5Y16Jr9LB9dHVkh6ZevG+vAbOsNOYCX+sXvFWFu7B3Iz5mijW3zdbMyhsh8ANd2mSWBYdJgnqi+mL7/LrOPYg==}
@@ -5659,7 +5659,7 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/node@25.0.9':
+  '@types/node@25.0.10':
     dependencies:
       undici-types: 7.16.0
 
@@ -6328,7 +6328,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 25.0.9
+      '@types/node': 25.0.10
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -6411,7 +6411,7 @@ snapshots:
 
   loader-runner@4.3.1: {}
 
-  lodash-es@4.17.22: {}
+  lodash-es@4.17.23: {}
 
   lru-cache@11.2.4: {}
 
@@ -6659,7 +6659,7 @@ snapshots:
 
   retry@0.13.1: {}
 
-  rolldown-vite@7.3.1(@types/node@25.0.9)(esbuild@0.27.2)(terser@5.46.0):
+  rolldown-vite@7.3.1(@types/node@25.0.10)(esbuild@0.27.2)(terser@5.46.0):
     dependencies:
       '@oxc-project/runtime': 0.101.0
       fdir: 6.5.0(picomatch@4.0.3)
@@ -6669,7 +6669,7 @@ snapshots:
       rolldown: 1.0.0-beta.60
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 25.0.9
+      '@types/node': 25.0.10
       esbuild: 0.27.2
       fsevents: 2.3.3
       terser: 5.46.0
