@@ -11,8 +11,8 @@ import { minify } from "rollup-plugin-swc3";
  * Build variants:
  * 1. oxc: output.minify: true (oxc minifier) → rolldown-dist
  * 2. swc: swc plugin (swc minifier) → rolldown-swc-dist
- * 3. strictExecutionOrder: strictExecutionOrder: true + output.minify: true (oxc minifier) → rolldown-strictExecutionOrder-dist
- * 4. onDemandWrapping: strictExecutionOrder: true + onDemandWrapping: true + output.minify: true (oxc minifier) → rolldown-onDemandWrapping-dist
+ * 3. strictExecutionOrder: output.strictExecutionOrder: true + output.minify: true (oxc minifier) → rolldown-strictExecutionOrder-dist
+ * 4. onDemandWrapping: output.strictExecutionOrder: true + onDemandWrapping: true + output.minify: true (oxc minifier) → rolldown-onDemandWrapping-dist
  */
 export function getSharedRolldownConfig() {
   const minifier = process.env.ROLLDOWN_MINIFIER;
@@ -59,7 +59,7 @@ export function getSharedRolldownConfig() {
 
   // Add experimental options
   if (strictExecutionOrder) {
-    config.experimental.strictExecutionOrder = true;
+    config.output.strictExecutionOrder = true;
   }
 
   if (onDemandWrapping) {
