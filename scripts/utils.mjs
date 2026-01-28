@@ -9,7 +9,7 @@ export function persistEntries(entries, filename) {
 
 export function getVersionMap() {
   const res = execSync(
-    "pnpm list 'rolldown' 'rolldown-vite' 'esbuild' '@rspack/cli' 'parcel' '@swc/core' --json",
+    "pnpm list 'rolldown' 'vite' 'esbuild' '@rspack/cli' 'parcel' '@swc/core' --json",
     {},
   );
 
