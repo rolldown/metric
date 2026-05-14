@@ -15,15 +15,16 @@ runs:
         cache: 'pnpm'
 
     - name: Get pnpm store directory
+      id: pnpm-store
       shell: bash
       run: |
-        echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+        echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
 
     - uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
       name: Setup pnpm cache
       if: ${{ github.ref_name == 'main' }}
       with:
-        path: ${{ env.STORE_PATH }}
+        path: ${{ steps.pnpm-store.outputs.path }}
         key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: |
           ${{ runner.os }}-pnpm-store-
@@ -31,7 +32,7 @@ runs:
     - uses: actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
       if: ${{ github.ref_name != 'main' }}
       with:
-        path: ${{ env.STORE_PATH }}
+        path: ${{ steps.pnpm-store.outputs.path }}
         key: |
           ${{ runner.os }}-pnpm-store-
 
