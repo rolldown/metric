@@ -15,5 +15,5 @@
 		"build": "pnpm run --filter '@metric/*' build",
 		"build:web": "pnpm run --filter 'metric-web' build"
 	},
-	"packageManager": "pnpm@11.1.2"
+	"packageManager": "pnpm@11.9.0"
 }
