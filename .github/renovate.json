@@ -1,9 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>Boshen/renovate", "config:recommended"],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true
-  },
-  "automerge": true
+  "extends": ["github>Boshen/renovate"]
 }
