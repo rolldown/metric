@@ -1,5 +1,4 @@
 import { Entry } from "./types";
-type DataFetcher = () => Promise<string>;
 interface DataSource {
 	fetchData(): Promise<Entry[]>;
 }
@@ -18,48 +17,16 @@ class NetWorkDataSource implements DataSource {
 	}
 }
 
-class BasicDataSource implements DataSource {
-	constructor(
-		private fetch: DataFetcher,
-		private normalized: (source: string) => Entry[],
-	) {}
-
-	async fetchData(): Promise<Entry[]> {
-		const source = await this.fetch();
-		return this.normalized(source);
-	}
-}
 export async function initDataSource(): Promise<Entry[]> {
+	// Both sources are Entry-schema JSON lines; the benchmark one carries
+	// `metric`/`unit` per line ("production build time" in ms, "peak memory"
+	// in byte), so no normalization happens here anymore.
 	const res = await Promise.all([
 		new NetWorkDataSource(
 			"https://raw.githubusercontent.com/rolldown/metric/main/metric.json",
 		).fetchData(),
-		new BasicDataSource(
-			async () => {
-				const res = await fetch("https://raw.githubusercontent.com/rolldown/benchmark-results-storage/main/benchmark-node-output.json");
-				const data = await res.text();
-				return data;
-			},
-			(source) => {
-				const json = JSON.parse(source);
-				let entries: Entry[] = [];
-				json["entries"]?.["Node Benchmark"].forEach((item) => {
-					let { commit, date, benches } = item;
-					for (let i = 0, len = benches.length; i < len; i++) {
-						entries.push({
-							case: benches[i].name,
-							metric: "production build time",
-							unit: "ms",
-							commit: commit.id,
-							records: {
-								rolldown: +benches[i].value,
-							},
-							timestamp: date,
-						});
-					}
-				});
-				return entries;
-			},
+		new NetWorkDataSource(
+			"https://raw.githubusercontent.com/rolldown/benchmark-results-storage/main/benchmark-node-output.jsonl",
 		).fetchData(),
 	]);
 	return res.flat();
