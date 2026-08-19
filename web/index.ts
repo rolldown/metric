@@ -62,6 +62,10 @@ async function main() {
 			plotName = `${sourcemap ? "all suites (sourcemap)" : "all suites"}/${metric}`;
 			seriesLabel = caseName.replace(" (default)", "").replace("-sourcemap", "");
 		}
+		// Byte counts are unreadable on the axis and in the hover; show the
+		// memory charts in MB instead.
+		const isMemory = metric === "peak memory";
+		const displayUnit = isMemory ? "MB" : unit;
 		let plot = plots.get(plotName);
 		if (!plot) {
 			plot = {
@@ -73,10 +77,8 @@ async function main() {
 						tickformat: "%Y-%m-%d",
 					},
 					yaxis: {
-						title: unit,
+						title: displayUnit,
 						rangemode: "tozero",
-						// SI ticks (500M, 2G) keep the merged byte axis readable.
-						...(metric === "peak memory" ? { tickformat: "~s" } : {}),
 					},
 					width: Math.min(1200, window.innerWidth - 30),
 					margin: {
@@ -106,7 +108,7 @@ async function main() {
 					shape: "hv",
 				},
 				x: timestamp.map((n) => new Date(n)),
-				y: value,
+				y: isMemory ? value.map((v) => v / 1e6) : value,
 				hovertext: commit.map(item => {
           if (typeof item === "string") {
             return item;
@@ -116,7 +118,7 @@ async function main() {
             return ''
           }
         }),
-				hovertemplate: `%{y} ${unit}<br>(%{hovertext})`,
+				hovertemplate: `%{y${isMemory ? ":.1f" : ""}} ${displayUnit}<br>(%{hovertext})`,
 				repoUrl: repoUrl
 			});
 		});
