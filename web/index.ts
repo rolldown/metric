@@ -52,8 +52,16 @@ async function main() {
 		{ unit, data, commit, timestamp, metric, repoUrl },
 	] of Object.entries(normalizedEntryDict)) {
 		let plotName = series;
-		let seriesName: string;
-		seriesName = series;
+		let seriesLabel: string | undefined;
+		// Merge the per-suite "peak memory" plots into two compact charts: every
+		// sourcemap suite in one, every other suite in the other. One chart per
+		// suite made the memory section too sparse to read.
+		if (metric === "peak memory") {
+			const caseName = series.slice(0, -`/${metric}`.length);
+			const sourcemap = caseName.includes("sourcemap");
+			plotName = `${sourcemap ? "all suites (sourcemap)" : "all suites"}/${metric}`;
+			seriesLabel = caseName.replace(" (default)", "").replace("-sourcemap", "");
+		}
 		let plot = plots.get(plotName);
 		if (!plot) {
 			plot = {
@@ -67,6 +75,8 @@ async function main() {
 					yaxis: {
 						title: unit,
 						rangemode: "tozero",
+						// SI ticks (500M, 2G) keep the merged byte axis readable.
+						...(metric === "peak memory" ? { tickformat: "~s" } : {}),
 					},
 					width: Math.min(1200, window.innerWidth - 30),
 					margin: {
@@ -86,7 +96,11 @@ async function main() {
 
 		Object.entries(data).forEach(([key, value]) => {
 			plot?.data.push({
-				name: key,
+				name: seriesLabel
+					? key === "rolldown"
+						? seriesLabel
+						: `${seriesLabel} (${key})`
+					: key,
 				line: {
 					// @ts-ignore
 					shape: "hv",
