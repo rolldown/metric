@@ -45,8 +45,8 @@ importers:
   packages/10000:
     dependencies:
       '@iconify-icons/material-symbols':
-        specifier: ^1.2.58
-        version: 1.2.59
+        specifier: ^2.0.0
+        version: 2.0.1
       '@iconify/react':
         specifier: ^6.0.0
         version: 6.0.2(react@19.2.8)
@@ -816,8 +816,8 @@ packages:
   '@griffel/style-types@1.4.2':
     resolution: {integrity: sha512-MsSghfpyxR2MpTrYdcCozISsSLkmFjNw94wNPi4bDBRLW8W43718W/ZjmUdVkoM0KXMtJPYuEkx8Mzibqb03qA==}
 
-  '@iconify-icons/material-symbols@1.2.59':
-    resolution: {integrity: sha512-BwNKTZN9XWtH4S13Kzwrsk+JbfQ7oGSF8ryc4AmxNTeWZ2sW35F5BryRqW4PsQdExrrMbOiXygkxIj4UkE7Uxg==}
+  '@iconify-icons/material-symbols@2.0.1':
+    resolution: {integrity: sha512-0z9hJBERh3EyUYQKCp0NS2aWRi/aUdTo7t6Oowi2YZfs7Q8d/m/DpbMbbGL/F2wqtZ+1GM20hvBNX0rfMweunQ==}
 
   '@iconify/react@6.0.2':
     resolution: {integrity: sha512-SMmC2sactfpJD427WJEDN6PMyznTFMhByK9yLW0gOTtnjzzbsi/Ke/XqsumsavFPwNiXs8jSiYeZTmLCLwO+Fg==}
@@ -3751,7 +3751,7 @@ snapshots:
     dependencies:
       csstype: 3.2.3
 
-  '@iconify-icons/material-symbols@1.2.59':
+  '@iconify-icons/material-symbols@2.0.1':
     dependencies:
       '@iconify/types': 2.0.0
 
